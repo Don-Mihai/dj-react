@@ -1,5 +1,5 @@
-import audioFile from "../../assets/dj.png"; // Импорт аудиофайла
-import djImage from "../../assets/dj.png"; // Импорт изображения диджея
+import audioFile from "../../assets/dj.png";
+import djImage from "../../assets/dj.png";
 import img1 from "../../assets/img.png";
 import img2 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
 import fanbaseImg1 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
