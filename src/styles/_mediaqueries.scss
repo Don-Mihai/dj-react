@@ -1,0 +1,199 @@
+@media (max-width: 1024px) {
+  .logo {
+    width: 175px;
+  }
+
+  .nav {
+    gap: 16px;
+
+    &__link {
+      font-size: 12px;
+    }
+  }
+
+  .feel__subtitle {
+    font-size: 90px;
+  }
+
+  .about {
+    padding: 0px 16px;
+
+    &__portrait {
+      max-height: 550px;
+    }
+  }
+
+  .listen__deco {
+    bottom: 306px;
+    left: 300px;
+  }
+
+  .release {
+    &__card-title {
+      font-size: 40px;
+      margin-top: -150px;
+    }
+
+    &__rect {
+      width: 222px;
+      height: 234px;
+    }
+  }
+
+  .fanbase {
+    &__deco {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .subscribe {
+    text-align: center;
+
+    &__form {
+      padding-top: 20px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      &__email {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__icons {
+      display: none;
+    }
+
+    &__container {
+      justify-content: space-around;
+    }
+  }
+
+  .feel__subtitle {
+    font-size: 56px;
+    margin-top: -70px;
+  }
+
+  .about {
+    &__portrait,
+    &__deco-dbl,
+    &__deco {
+      display: none;
+    }
+  }
+
+  .listen {
+    &__deco {
+      bottom: 363px;
+      left: 210px;
+    }
+  }
+
+  .release {
+    &__card-title {
+      font-size: 16px;
+      margin-top: -38px;
+      padding-bottom: 10px;
+    }
+
+    &__rect {
+      width: 92px;
+      height: 97px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__card_title {
+      font-size: 16px;
+      margin-top: -40px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .tickets {
+    &__text-cont {
+      height: 92px;
+      white-space: nowrap;
+    }
+  }
+
+  .fanbase {
+    &__deco {
+      width: 20px;
+      height: 20px;
+    }
+    &__parallax-pics {
+      display: none;
+    }
+
+    &__content {
+      max-width: 90%;
+    }
+  }
+
+  .footer__rights {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+
+  .feel__subtitle {
+    font-size: 40px;
+    margin-top: -85px;
+  }
+
+  .listen {
+    &__deco {
+      bottom: 413px;
+      left: 160px;
+    }
+  }
+
+  .tickets__wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about {
+    padding: 16px;
+    padding-top: 0px;
+
+    &__content {
+      padding-left: 0px;
+    }
+  }
+
+  .release {
+    &__singles {
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+    }
+
+    &__rect {
+      width: calc(0.3 * 370px);
+      height: calc(0.3 * 390px);
+    }
+  }
+
+  .subscribe {
+    &__form {
+      &__email {
+        width: 350px;
+      }
+    }
+  }
+}

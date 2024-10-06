@@ -1,0 +1,53 @@
+$primary-color: #ff6b00;
+$secondary-color: #1b1c1e;
+$text-color: #fafafa;
+$hover-color: #fd7e14;
+$basic-font-size: 14px;
+$font-family: "Montserrat", sans-serif;
+
+.artist-card {
+  position: relative;
+  max-width: 240px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  cursor: pointer;
+  font-family: $font-family;
+
+  &__image {
+    width: 236px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: $basic-font-size;
+    text-align: center;
+  }
+}

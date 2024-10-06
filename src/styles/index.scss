@@ -1,0 +1,908 @@
+@import "reset";
+@import "common";
+@import "variables";
+@import "design-system";
+@import "header";
+
+@mixin horizontal-align {
+  display: flex;
+  justify-content: center;
+}
+
+/* --------- feel ------------ */
+.feel {
+  margin-top: $header-hight;
+  @include horizontal-align;
+  align-items: flex-end;
+  height: calc(100vh - $header-hight);
+  background: url("../assets/fell.jpg") no-repeat center/cover fixed;
+}
+
+.feel__container {
+  margin-bottom: 200px;
+}
+
+.feel__subtitle {
+  width: 100%;
+  font-size: 120px;
+  font-weight: 700;
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.audio {
+  margin-top: 16px;
+  width: 100%;
+}
+
+/* --------- end feel ------------ */
+
+/* --------- dj ------------ */
+
+.dj {
+  padding: 150px 1px;
+  @include horizontal-align;
+  align-items: center;
+  gap: 100px;
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__image {
+    border-radius: 7px;
+    height: 327px;
+  }
+
+  &__figure {
+    top: -20px;
+    left: 30px;
+  }
+
+  &__content {
+    width: 500px;
+  }
+
+  &__title {
+    font-weight: 700;
+    color: #151515;
+  }
+
+  &__text {
+    font-size: 15px;
+    color: #151515;
+  }
+
+  &__quote {
+    padding: 12px 23px 0;
+    margin-bottom: 35px;
+    font-size: 24px;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 54px;
+  padding: 10px;
+  user-select: none;
+  color: #151515;
+}
+
+.left-arrow {
+  position: absolute;
+  left: 0;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 0;
+}
+
+/* --------- end dj ------------ */
+
+/* --------- listen ------------ */
+
+.listen {
+  background: url("../assets/img.png") no-repeat center/cover;
+  background-attachment: fixed;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    padding: 150px 0;
+  }
+
+  &__title {
+    border-radius: 8px;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  &__figure {
+    top: -20px;
+    right: 10px;
+  }
+}
+
+/*__________ release start __________*/
+.release {
+  margin-top: $margin-top;
+  margin-bottom: $margin-top;
+
+  &__title {
+    color: $darkest;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__text {
+    flex-wrap: wrap;
+    max-width: 520px;
+  }
+
+  &__singles {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__rect {
+    margin-top: 32px;
+  }
+
+  &__card_title {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: -156px;
+    padding-bottom: 90px;
+    color: $lightest;
+  }
+
+  &__description {
+    color: $darkest;
+    color: $darkest;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+
+  &__date {
+    color: $darkest;
+    font-size: 18px;
+  }
+}
+
+/*__________ release end __________*/
+
+/*__________ fanbase start __________*/
+.fanbase {
+  background: url("../assets/andrew-kliatskyi-jpu0gMXT9to-unsplash.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+  padding: $margin-top 0px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__parallax-pics {
+    max-width: 30%;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    max-width: 70%;
+  }
+
+  &__list-item {
+    display: flex;
+    padding: 60px 0px 0px 60px;
+    gap: 24px;
+    align-items: center;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__deco {
+    width: 51px;
+    height: 51px;
+    border: $accent 5px solid;
+  }
+
+  &__subtitle {
+    color: $lightest;
+    font-size: 32px;
+  }
+
+  &__text {
+    color: $lightest;
+  }
+}
+
+/*__________ fanbase end __________*/
+
+/* --------- tickets ------------ */
+
+.tickets {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    line-height: 1;
+  }
+
+  &__title {
+    color: #151515;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__price {
+    color: #151515;
+    font-size: 110px;
+  }
+
+  &__text-cont {
+    color: #151515;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+// ---------- start services ---------
+
+.services-page {
+  margin-top: 110px;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: $darkest;
+  }
+
+  .service-item {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    padding: 40px;
+    background-color: $lightest;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+
+    &__title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: $darkest;
+    }
+
+    &__price {
+      font-size: 48px;
+      color: $accent;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: $darker;
+    }
+
+    &__benefits {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+
+      li {
+        font-size: 16px;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        color: $darkest;
+
+        &:before {
+          content: "•";
+          color: $accent;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+    .button {
+      align-self: center;
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &-primary {
+        background-color: $accent;
+        color: $lightest;
+        border: none;
+
+        &:hover {
+          background-color: darken($accent, 10%);
+        }
+      }
+
+      &-secondary {
+        background-color: $darker;
+        color: $lightest;
+        border: none;
+
+        &:hover {
+          background-color: lighten($darker, 10%);
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    background-color: $lightest;
+
+    &__title {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: $darkest;
+    }
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .testimonial {
+        font-size: 16px;
+        font-style: italic;
+        color: $darker;
+        position: relative;
+        padding: 20px;
+        background-color: $light;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+        &:before {
+          content: "“";
+          font-size: 36px;
+          position: absolute;
+          left: 10px;
+          top: -10px;
+          color: $accent;
+        }
+
+        cite {
+          display: block;
+          font-style: normal;
+          font-weight: 600;
+          margin-top: 10px;
+          color: $darkest;
+        }
+      }
+    }
+  }
+}
+
+.events-link {
+  padding: 10px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+  &__content {
+    font-size: 24px;
+    font-weight: 600;
+    color: $darkest;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent;
+
+      .arrow {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  .arrow {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    color: $accent;
+  }
+}
+
+// ----------- end services -------------
+
+.order {
+  height: 1000px;
+  padding: 100px;
+}
+
+.calculator {
+  padding: 40px;
+  background-color: $lightest;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+
+  &__title {
+    font-size: 32px;
+    color: $darkest;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+
+    label {
+      font-size: 16px;
+      color: $darkest;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid $lighter;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $accent;
+        outline: none;
+      }
+    }
+  }
+
+  .package-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + .radio-label {
+        background-color: $accent;
+        color: $lightest;
+        box-shadow: 0px 4px 10px rgba(129, 33, 224, 0.2);
+      }
+    }
+
+    .radio-label {
+      padding: 10px;
+      border: 2px solid $lighter;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 16px;
+
+      &:hover {
+        border-color: $accent;
+      }
+    }
+  }
+
+  .extra-services {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input[type="checkbox"] {
+      display: none;
+
+      &:checked + .checkbox-label {
+        background-color: $accent;
+        color: $lightest;
+        box-shadow: 0px 4px 10px rgba(129, 33, 224, 0.2);
+      }
+    }
+
+    .checkbox-label {
+      padding: 10px;
+      border: 2px solid $lighter;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+
+      &:hover {
+        border-color: $accent;
+      }
+    }
+  }
+
+  .button-primary {
+    background-color: $accent;
+    color: $lightest;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    color: $accent;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 175px;
+  }
+
+  .nav {
+    gap: 38px;
+
+    &__link {
+      font-size: 13px;
+    }
+  }
+
+  .feel__subtitle {
+    font-size: 90px;
+  }
+
+  .dj {
+    gap: 40px;
+
+    &__image {
+      display: none;
+    }
+  }
+}
+
+/*__________ subscribe start__________*/
+.subscribe {
+  padding: $margin-top 0;
+  background: url("../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg") no-repeat center/cover fixed;
+
+  &__form {
+    padding-top: 60px;
+    gap: 24px;
+
+    &__email {
+      height: 60px;
+      width: 500px;
+      padding-left: 16px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*__________ subscribe end __________*/
+
+/*__________ footer start__________*/
+.footer {
+  position: relative;
+  padding: $margin-top 0;
+  background: $darker;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    padding-bottom: 60px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    padding-bottom: 40px;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    padding-bottom: 90px;
+  }
+
+  &__rights {
+    padding-bottom: 40px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__deco {
+    position: absolute;
+    top: -20px;
+    left: 80px;
+  }
+}
+
+/*__________ footer end __________*/
+
+@mixin font-settings($size, $weight: normal, $lh: 1.5) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+.company {
+  background-color: $lightest;
+  color: $darkest;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 110px;
+
+  &__content {
+    max-width: 960px;
+  }
+
+  &__title,
+  .contacts__title {
+    @include font-settings(36px, bold);
+    color: $accent;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    @include font-settings(18px);
+    color: $darker;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .company__contacts {
+    font-size: 16px;
+
+    .contacts__info {
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      .social-link {
+        color: $accent;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  gap: 20px;
+  padding: 150px 10px 40px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.gallery-item {
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.gallery-home {
+  height: calc(100vh - $header-hight);
+  overflow: hidden;
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50%;
+  }
+
+  &__bottom {
+    display: flex;
+    height: 50%;
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.anonces {
+  padding: 50px 0;
+
+  &__title {
+    color: #151515;
+  }
+
+  &__items {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 20px;
+
+    border: 1px solid #151515;
+  }
+
+  &__date {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+
+    i {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+
+    &.telegram {
+      background-color: #0088cc;
+
+      &:hover {
+        background-color: #007bb5;
+      }
+    }
+
+    &.whatsapp {
+      background-color: #25d366;
+
+      &:hover {
+        background-color: #1ebe57;
+      }
+    }
+  }
+}
+
+.service-banners {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 20px;
+  width: 800px;
+
+  .banner {
+    position: relative;
+    width: 22%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .banner-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@import "mediaqueries";
