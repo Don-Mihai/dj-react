@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/don-mihai.github.io/dj-react/static/css/main.0478c082.css",
-    "main.js": "/don-mihai.github.io/dj-react/static/js/main.75fd0f23.js",
-    "static/media/img.png": "/don-mihai.github.io/dj-react/static/media/img.1595eff5cfffa8b75194.png",
-    "static/media/fell.jpg": "/don-mihai.github.io/dj-react/static/media/fell.0aee2bf60b316e56ae12.jpg",
-    "static/media/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg": "/don-mihai.github.io/dj-react/static/media/jiroe-matia-rengel-b9kh72kOcdM-unsplash.8e645856eff47a1f007c.jpg",
-    "static/media/andrew-kliatskyi-jpu0gMXT9to-unsplash.jpg": "/don-mihai.github.io/dj-react/static/media/andrew-kliatskyi-jpu0gMXT9to-unsplash.767419d48916a340deab.jpg",
-    "index.html": "/don-mihai.github.io/dj-react/index.html",
-    "main.0478c082.css.map": "/don-mihai.github.io/dj-react/static/css/main.0478c082.css.map",
-    "main.75fd0f23.js.map": "/don-mihai.github.io/dj-react/static/js/main.75fd0f23.js.map"
+    "main.css": "/static/css/main.f6ffd7dd.css",
+    "main.js": "/static/js/main.75fd0f23.js",
+    "static/media/img.png": "/static/media/img.1595eff5cfffa8b75194.png",
+    "static/media/fell.jpg": "/static/media/fell.0aee2bf60b316e56ae12.jpg",
+    "static/media/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg": "/static/media/jiroe-matia-rengel-b9kh72kOcdM-unsplash.8e645856eff47a1f007c.jpg",
+    "static/media/andrew-kliatskyi-jpu0gMXT9to-unsplash.jpg": "/static/media/andrew-kliatskyi-jpu0gMXT9to-unsplash.767419d48916a340deab.jpg",
+    "index.html": "/index.html",
+    "main.f6ffd7dd.css.map": "/static/css/main.f6ffd7dd.css.map",
+    "main.75fd0f23.js.map": "/static/js/main.75fd0f23.js.map"
   },
   "entrypoints": [
-    "static/css/main.0478c082.css",
+    "static/css/main.f6ffd7dd.css",
     "static/js/main.75fd0f23.js"
   ]
 }
