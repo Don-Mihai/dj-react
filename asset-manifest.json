@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Don-Mihai.github.io/dj-react/static/css/main.01adcb0f.css",
-    "main.js": "/Don-Mihai.github.io/dj-react/static/js/main.b10fa8a7.js",
+    "main.js": "/Don-Mihai.github.io/dj-react/static/js/main.75fd0f23.js",
     "static/media/img.png": "/Don-Mihai.github.io/dj-react/static/media/img.1595eff5cfffa8b75194.png",
     "static/media/fell.jpg": "/Don-Mihai.github.io/dj-react/static/media/fell.0aee2bf60b316e56ae12.jpg",
     "static/media/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg": "/Don-Mihai.github.io/dj-react/static/media/jiroe-matia-rengel-b9kh72kOcdM-unsplash.8e645856eff47a1f007c.jpg",
     "static/media/andrew-kliatskyi-jpu0gMXT9to-unsplash.jpg": "/Don-Mihai.github.io/dj-react/static/media/andrew-kliatskyi-jpu0gMXT9to-unsplash.767419d48916a340deab.jpg",
     "index.html": "/Don-Mihai.github.io/dj-react/index.html",
     "main.01adcb0f.css.map": "/Don-Mihai.github.io/dj-react/static/css/main.01adcb0f.css.map",
-    "main.b10fa8a7.js.map": "/Don-Mihai.github.io/dj-react/static/js/main.b10fa8a7.js.map"
+    "main.75fd0f23.js.map": "/Don-Mihai.github.io/dj-react/static/js/main.75fd0f23.js.map"
   },
   "entrypoints": [
     "static/css/main.01adcb0f.css",
-    "static/js/main.b10fa8a7.js"
+    "static/js/main.75fd0f23.js"
   ]
 }
