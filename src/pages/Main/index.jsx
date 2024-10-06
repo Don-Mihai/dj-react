@@ -1,3 +1,15 @@
+import audioFile from "../../assets/dj.png"; // Импорт аудиофайла
+import djImage from "../../assets/dj.png"; // Импорт изображения диджея
+import img1 from "../../assets/img.png";
+import img2 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
+import fanbaseImg1 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
+import img3 from "../../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg";
+import fanbaseImg3 from "../../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg";
+import single1 from "../../assets/singles/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg";
+import single2 from "../../assets/singles/xu-haiwei-iE7AmEF-9wk-unsplash.jpg";
+import single3 from "../../assets/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash.jpg";
+import fanbaseImg2 from "../../assets/djvibe-studiox-BcPOnSqC4Cw-unsplash.jpg";
+
 const Main = () => {
   return (
     <>
@@ -11,7 +23,7 @@ const Main = () => {
           </svg>
 
           <audio className="audio" controls>
-            <source src="horse.mp3" type="audio/mpeg" />
+            <source src={audioFile} type="audio/mpeg" />
             --> Your browser does not support the audio element.
           </audio>
         </div>
@@ -21,7 +33,7 @@ const Main = () => {
         <div className="arrow left-arrow">←</div>
         <div className="arrow right-arrow">→</div>
         <div className="dj__wrap">
-          <img src="/images/dj.png" alt="" className="dj__image" />
+          <img src={djImage} alt="" className="dj__image" />
           <div className="figure dj__figure"></div>
         </div>
         <div className="dj__content">
@@ -44,41 +56,21 @@ const Main = () => {
       <section className="gallery-home">
         <div className="gallery-home__top">
           <div className="gallery-home__item">
-            <img
-              className="gallery-home__img"
-              src="/images/img.png"
-              alt="Image 1"
-            />
+            <img className="gallery-home__img" src={img1} alt="Image 1" />
           </div>
           <div className="gallery-home__item">
-            <img
-              className="gallery-home__img"
-              src="/images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg"
-              alt="Image 1"
-            />
+            <img className="gallery-home__img" src={img2} alt="Image 1" />
           </div>
           <div className="gallery-home__item">
-            <img
-              className="gallery-home__img"
-              src="/images/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg"
-              alt="Image 1"
-            />
+            <img className="gallery-home__img" src={img3} alt="Image 1" />
           </div>
         </div>
         <div className="gallery-home__bottom">
           <div className="gallery-home__item">
-            <img
-              className="gallery-home__img"
-              src="/images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg"
-              alt="Image 1"
-            />
+            <img className="gallery-home__img" src={img1} alt="Image 1" />
           </div>
           <div className="gallery-home__item">
-            <img
-              className="gallery-home__img"
-              src="/images/img.png"
-              alt="Image 1"
-            />
+            <img className="gallery-home__img" src={img2} alt="Image 1" />
           </div>
         </div>
       </section>
@@ -95,7 +87,7 @@ const Main = () => {
             <div className="release__card">
               <img
                 className="release__rect"
-                src="/images/singles/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg"
+                src={single1}
                 width="318"
                 height="335"
                 alt=""
@@ -108,7 +100,7 @@ const Main = () => {
             <div className="release__card">
               <img
                 className="release__rect"
-                src="/images/singles/xu-haiwei-iE7AmEF-9wk-unsplash.jpg"
+                src={single2}
                 width="318"
                 height="335"
                 alt=""
@@ -121,7 +113,7 @@ const Main = () => {
             <div className="release__card">
               <img
                 className="release__rect"
-                src="/images/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash.jpg"
+                src={single3}
                 width="318"
                 height="335"
                 alt=""
@@ -136,26 +128,11 @@ const Main = () => {
       <section className="fanbase">
         <div className="container fanbase__container">
           <div className="fanbase__parallax-pics">
-            <img
-              src="/images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg"
-              alt=""
-              width="178px"
-              height="126px"
-            />
+            <img src={fanbaseImg1} alt="" width="178px" height="126px" />
 
-            <img
-              src="/images/djvibe-studiox-BcPOnSqC4Cw-unsplash.jpg"
-              alt=""
-              width="217px"
-              height="152px"
-            />
+            <img src={fanbaseImg2} alt="" width="217px" height="152px" />
 
-            <img
-              src="/images/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg"
-              alt=""
-              width="216px"
-              height="153px"
-            />
+            <img src={fanbaseImg3} alt="" width="216px" height="153px" />
           </div>
           <div className="fanbase__content">
             <h3 className="title">Join the Fanbase</h3>

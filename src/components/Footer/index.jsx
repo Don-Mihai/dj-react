@@ -1,8 +1,10 @@
+import img1 from "../../assets/logo.png";
+
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__logo">
-        <img src="/images/logo.png" alt="" className="logo" />
+        <img src={img1} alt="" className="logo" />
       </div>
       <div className="footer__links">
         <a href="#" className="nav__link">

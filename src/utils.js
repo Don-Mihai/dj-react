@@ -1,9 +1,18 @@
+import image1 from "./assets/artists/Image-1.png";
+import image5 from "./assets/artists/Image-1.png";
+import image2 from "./assets/artists/Image-2.png";
+import image6 from "./assets/artists/Image-2.png";
+import image3 from "./assets/artists/Image-3.png";
+import image7 from "./assets/artists/Image-3.png";
+import image8 from "./assets/artists/Image-3.png";
+import image4 from "./assets/artists/Image-4.png";
+
 export const artistsData = [
   {
     id: 1,
     name: "Mia Anderson",
     label: "Pop Artist",
-    image: "/images/artists/Image-1.png",
+    image: image1,
     shortDescription: "Популярная поп-звезда.",
     fullDescription: "Миа Андерсон - одна из ведущих поп-артистов.",
     category: "dj",
@@ -13,7 +22,7 @@ export const artistsData = [
     id: 2,
     name: "Benjamin Smith",
     label: "Country Artist",
-    image: "/images/artists/Image-2.png",
+    image: image2,
     shortDescription: "Известный кантри-исполнитель.",
     fullDescription: "Бенджамин Смит - легенда кантри-музыки.",
     category: "mc",
@@ -23,7 +32,7 @@ export const artistsData = [
     id: 3,
     name: "Charlotte Parker",
     label: "Rap Artist",
-    image: "/images/artists/Image-3.png",
+    image: image3,
     shortDescription: "Топовый рэп-исполнитель.",
     fullDescription: "Шарлотта Паркер - звезда рэп-сцены.",
     category: "artist",
@@ -33,7 +42,7 @@ export const artistsData = [
     id: 4,
     name: "Matthew Clark",
     label: "Metal Artist",
-    image: "/images/artists/Image-4.png",
+    image: image4,
     shortDescription: "Звезда метал-сцены.",
     fullDescription: "Мэтью Кларк - легенда метал-музыки.",
     category: "dj",
@@ -43,7 +52,7 @@ export const artistsData = [
     id: 5,
     name: "Elena Rossi",
     label: "Classical Soprano",
-    image: "/images/artists/Image-5.png",
+    image: image5,
     shortDescription: "Известная оперная певица.",
     fullDescription:
       "Елена Росси - оперная певица, завоевавшая мировое признание.",
@@ -54,7 +63,7 @@ export const artistsData = [
     id: 6,
     name: "Liam Scott",
     label: "Rock Guitarist",
-    image: "/images/artists/Image-6.png",
+    image: image6,
     shortDescription: "Легендарный рок-гитарист.",
     fullDescription:
       "Лиам Скотт - виртуозный рок-гитарист с многолетним опытом.",
@@ -65,7 +74,7 @@ export const artistsData = [
     id: 7,
     name: "Natalie Johnson",
     label: "Jazz Vocalist",
-    image: "/images/artists/Image-7.png",
+    image: image7,
     shortDescription: "Популярная джазовая певица.",
     fullDescription:
       "Натали Джонсон - одна из самых талантливых джазовых вокалисток нашего времени.",
@@ -76,7 +85,7 @@ export const artistsData = [
     id: 8,
     name: "Oliver Stone",
     label: "Electronic DJ",
-    image: "/images/artists/Image-8.png",
+    image: image8,
     shortDescription: "Звезда электронной музыки.",
     fullDescription:
       "Оливер Стоун - известный диджей, работающий в жанре электронной музыки.",

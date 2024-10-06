@@ -1,11 +1,12 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import img1 from "../../assets/logo.png";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="container header__container">
-        <img src="/images/logo.png" alt="" className="logo" />
+        <img src={img1} alt="" className="logo" />
 
         <nav className="nav">
           <Link to="/" className="nav__link">
