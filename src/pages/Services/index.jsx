@@ -2,7 +2,7 @@ import "./Services.scss";
 import OrderModal from "./OrderModal";
 import Calculator from "./Calculator";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Services = () => {
   const location = useLocation();
@@ -155,10 +155,10 @@ const Services = () => {
       <Calculator />
 
       <section className="events-link">
-        <a href="portfolio.html" className="events-link__content">
-          Наши мероприятия
-          <span className="arrow">→</span>
-        </a>
+        <Link to="/portfolio" className="events-link__content">
+        Наши мероприятия
+        <span className="arrow">→</span>
+        </Link>
       </section>
     </>
   );

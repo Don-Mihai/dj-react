@@ -47,7 +47,9 @@ const ArtistCard = ({ artist }) => {
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <Typography variant="h6">{artist.name}</Typography>
-          <Typography variant="body1">{artist.fullDescription}</Typography>
+          <Typography variant="body1" sx={{ marginBottom: "10px" }}>
+            {artist.fullDescription}
+            </Typography>
           <Button onClick={handleOrder} variant="contained" color="primary">
             Заказать
           </Button>

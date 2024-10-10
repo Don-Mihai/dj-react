@@ -238,7 +238,6 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="calculator"></section>
       <section className="subscribe">
         <div className="container subscribe__container">
           <h2 className="title">Subscribe to Stay Informed</h2>
