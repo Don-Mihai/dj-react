@@ -1,5 +1,4 @@
 import audioFile from "../../assets/dj.png";
-import djImage from "../../assets/dj.png";
 import img1 from "../../assets/img.png";
 import img2 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
 import fanbaseImg1 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
@@ -9,6 +8,7 @@ import single1 from "../../assets/singles/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg";
 import single2 from "../../assets/singles/xu-haiwei-iE7AmEF-9wk-unsplash.jpg";
 import single3 from "../../assets/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash.jpg";
 import fanbaseImg2 from "../../assets/djvibe-studiox-BcPOnSqC4Cw-unsplash.jpg";
+import ArtistSlide from "./ArtistSlide";
 
 const Main = () => {
   return (
@@ -29,30 +29,7 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="dj">
-        <div className="arrow left-arrow">←</div>
-        <div className="arrow right-arrow">→</div>
-        <div className="dj__wrap">
-          <img src={djImage} alt="" className="dj__image" />
-          <div className="figure dj__figure"></div>
-        </div>
-        <div className="dj__content">
-          <h3 className="title dj__title">About DJ Angerone</h3>
-          <p className="dj__text">
-            Mike Myers, professionally known as DJ Angerone, is internationally
-            acclaimed Progressive House & Trance DJ & musician.
-          </p>
-          <p className="dj__quote">
-            I try to experiment with various music genres in every track that I
-            make.
-          </p>
-          <p className="dj__text" id="text">
-            Since the beginning of his career in 2010, he has already released 5
-            EPs on a range of worldwide known labels (Booster Records, DSTRCT
-            Recordings etc.) and received a number of music awards.
-          </p>
-        </div>
-      </section>
+      <ArtistSlide />
       <section className="gallery-home">
         <div className="gallery-home__top">
           <div className="gallery-home__item">
