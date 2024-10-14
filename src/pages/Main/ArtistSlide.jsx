@@ -1,21 +1,9 @@
 import { useEffect, useState } from 'react';
 import { artistsData } from '../../utils';
 import './ArtistSlide.scss';
+import pickRandomArtists from './utils';
 
-function pickRandomArtists(array, numItems) { // подбор случайных артистов для слайдов
-  const result = [];
-  const randomArray = [...array];
-
-  for (let i = 0; i < numItems; i++) {
-    const randomIndex = Math.floor(Math.random() * randomArray.length);
-    result.push(randomArray[randomIndex]);
-    randomArray.splice(randomIndex, 1);
-  }
-
-  return result;
-}
-
-const randomArtists = pickRandomArtists(artistsData, 3);
+const randomArtists = pickRandomArtists(artistsData, 3); // делаем подборку из 3 случайных артистов
 
 const ArtistSlide = () => {
   const [activeIndex, setActiveIndex] = useState(0);
