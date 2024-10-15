@@ -8,16 +8,16 @@ const Footer = () => {
       </div>
       <div className="footer__links">
         <a href="#" className="nav__link">
-          ABOUT
+          Услуги
         </a>
         <a href="#" className="nav__link">
-          DISCOGRAPHY
+          Портфолио
         </a>
         <a href="#" className="nav__link">
-          TOURS
+          Диджеи
         </a>
         <a href="#" className="nav__link">
-          PHOTOS
+          О нас
         </a>
       </div>
       <div className="footer__icons">
