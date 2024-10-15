@@ -1,25 +1,28 @@
+import { Link } from "react-router-dom";
 import img1 from "../../assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__logo">
-        <img src={img1} alt="" className="logo" />
+        <Link to={"/"}>
+          <img src={img1} alt="" className="logo" />        
+        </Link>
       </div>
-      <div className="footer__links">
-        <a href="#" className="nav__link">
-          ABOUT
-        </a>
-        <a href="#" className="nav__link">
-          DISCOGRAPHY
-        </a>
-        <a href="#" className="nav__link">
-          TOURS
-        </a>
-        <a href="#" className="nav__link">
-          PHOTOS
-        </a>
-      </div>
+      <nav className="footer__links">
+          <Link to="/services" className="nav__link">
+            Услуги
+          </Link>
+          <Link to="/portfolio" className="nav__link">
+            Портфолио
+          </Link>
+          <Link to="/artists" className="nav__link">
+            Диджеи
+          </Link>
+          <Link to="/about" className="nav__link">
+            О нас
+          </Link>
+      </nav>
       <div className="footer__icons">
         <a
           href="https://www.youtube.com/channel/your_youtube_channel_id"
