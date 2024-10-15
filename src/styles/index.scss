@@ -38,69 +38,6 @@
 
 /* --------- end feel ------------ */
 
-/* --------- dj ------------ */
-
-.dj {
-  padding: 150px 1px;
-  @include horizontal-align;
-  align-items: center;
-  gap: 100px;
-
-  &__wrap {
-    position: relative;
-  }
-
-  &__image {
-    border-radius: 7px;
-    height: 327px;
-  }
-
-  &__figure {
-    top: -20px;
-    left: 30px;
-  }
-
-  &__content {
-    width: 500px;
-  }
-
-  &__title {
-    font-weight: 700;
-    color: #151515;
-  }
-
-  &__text {
-    font-size: 15px;
-    color: #151515;
-  }
-
-  &__quote {
-    padding: 12px 23px 0;
-    margin-bottom: 35px;
-    font-size: 24px;
-  }
-}
-
-.arrow {
-  cursor: pointer;
-  font-size: 54px;
-  padding: 10px;
-  user-select: none;
-  color: #151515;
-}
-
-.left-arrow {
-  position: absolute;
-  left: 0;
-}
-
-.right-arrow {
-  position: absolute;
-  right: 0;
-}
-
-/* --------- end dj ------------ */
-
 /* --------- listen ------------ */
 
 .listen {
