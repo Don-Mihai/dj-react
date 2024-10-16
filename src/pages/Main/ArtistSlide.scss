@@ -21,7 +21,7 @@
       transition: opacity 0.5s ease-in-out;
       @include horizontal-align;
       align-items: center;
-      gap: 100px;      
+      gap: 100px;
       z-index: 0;
 
       &.active {
