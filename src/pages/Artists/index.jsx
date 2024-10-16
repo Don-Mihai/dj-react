@@ -1,12 +1,15 @@
 import "./Artists.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ArtistCard from "./ArtistCard";
 import { artistsData } from "../../utils";
+import { useLocation } from "react-router-dom";
 
 // Создаем массив топ-диджеев
 const topDjs = artistsData.filter((artist) => artist.category === "dj");
 
 const Artists = () => {
+  const location = useLocation();
+  const selectedCategory = location.state?.selectedCategory; // Получаем выбранную категорию (dj, mc, artist)
   const [category, setCategory] = useState("dj");
 
   const handleCategoryChange = (newCategory) => {
@@ -17,6 +20,13 @@ const Artists = () => {
   const filteredArtists = artistsData.filter(
     (artist) => artist.category === category,
   );
+
+  // Для выбора нужной категории при переходе со слайдера на главной
+  useEffect(() => {
+    if (selectedCategory) {
+      setCategory(selectedCategory);
+    }
+  }, [selectedCategory])
 
   return (
     <>
