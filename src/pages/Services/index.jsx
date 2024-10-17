@@ -1,11 +1,15 @@
 import "./Services.scss";
 import OrderModal from "./OrderModal";
 import Calculator from "./Calculator";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Services = () => {
   const location = useLocation();
+  const [openModal, setOpenModal] = useState(false);
+  const closeModal = () => {
+    setOpenModal(false);
+  }
 
   useEffect(() => {
     if (location.hash === "#calculator") {
@@ -70,7 +74,7 @@ const Services = () => {
             <li>Фотосессия и видеосъемка</li>
             <li>Кейтеринг</li>
           </ul>
-          <button className="button button-secondary order-button">
+          <button className="button button-secondary order-button" onClick={() => setOpenModal(true)}>
             Заказать
           </button>
         </div>
@@ -89,7 +93,7 @@ const Services = () => {
             <li>Кейтеринг и напитки</li>
             <li>Призы и сувениры для участников</li>
           </ul>
-          <button className="button button-primary order-button">
+          <button className="button button-primary order-button" onClick={() => setOpenModal(true)}>
             Заказать
           </button>
         </div>
@@ -107,7 +111,7 @@ const Services = () => {
             <li>Аниматоры и ведущие</li>
             <li>Фото- и видеосъемка</li>
           </ul>
-          <button className="button button-secondary order-button">
+          <button className="button button-secondary order-button" onClick={() => setOpenModal(true)}>
             Заказать
           </button>
         </div>
@@ -125,12 +129,12 @@ const Services = () => {
             <li>Профессиональные ведущие и артисты</li>
             <li>Кейтеринг и развлекательная программа</li>
           </ul>
-          <button className="button button-primary order-button">
+          <button className="button button-primary order-button" onClick={() => setOpenModal(true)}>
             Заказать
           </button>
         </div>
 
-        <OrderModal />
+        <OrderModal open={openModal} onClose={closeModal} />
 
         <section className="testimonials">
           <h2 className="testimonials__title">Отзывы наших клиентов</h2>
