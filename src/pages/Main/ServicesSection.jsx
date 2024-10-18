@@ -5,6 +5,9 @@ import OrderModal from '../Services/OrderModal';
 const ServicesSection = () => {
   const [openModal, setOpenModal] = useState(false);
 
+  const onOpenModal = () => {
+    setOpenModal(true);
+  }
   const closeModal = () => {
     setOpenModal(false);
   };
@@ -23,7 +26,7 @@ const ServicesSection = () => {
             <span className="tickets__text">Free Snacks</span>
           </div>
 
-          <button className="button button-secondary" onClick={() => setOpenModal(true)}>
+          <button className="button button-secondary" onClick={onOpenModal}>
             Заказать
           </button>
         </div>
@@ -39,7 +42,7 @@ const ServicesSection = () => {
             <span className="tickets__text">Free Snacks</span>
           </div>
 
-          <button className="button button-secondary" onClick={() => setOpenModal(true)}>
+          <button className="button button-secondary" onClick={onOpenModal}>
             Заказать
           </button>
         </div>
@@ -55,7 +58,7 @@ const ServicesSection = () => {
             <span className="tickets__text">Club Events Only</span>
             <span className="tickets__text">Free Snacks</span>
           </div>
-          <button className="button button-secondary" onClick={() => setOpenModal(true)}>
+          <button className="button button-secondary" onClick={onOpenModal}>
             Заказать
           </button>
         </div>
@@ -71,7 +74,7 @@ const ServicesSection = () => {
             <span className="tickets__text">Club Events Only</span>
             <span className="tickets__text">Free Snacks</span>
           </div>
-          <button className="button button-secondary" onClick={() => setOpenModal(true)}>
+          <button className="button button-secondary" onClick={onOpenModal}>
             Заказать
           </button>
         </div>
