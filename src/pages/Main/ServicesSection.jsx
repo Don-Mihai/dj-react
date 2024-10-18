@@ -39,7 +39,7 @@ const ServicesSection = () => {
             <span className="tickets__text">Free Snacks</span>
           </div>
 
-          <button className="button" onClick={() => setOpenModal(true)}>
+          <button className="button button-secondary" onClick={() => setOpenModal(true)}>
             Заказать
           </button>
         </div>
