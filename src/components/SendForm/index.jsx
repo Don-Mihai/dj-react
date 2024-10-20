@@ -26,10 +26,10 @@ const SendForm = ({open, handleClose, orderDetails}) => {
 
         emailjs
             .send(
-                "YOUR_SERVICE_ID",
+                process.env.REACT_APP_SERVICE_ID || "YOUR_SERVICE_ID",
                 "YOUR_TEMPLATE_ID",
                 emailData,
-                "YOUR_PUBLIC_KEY"
+                process.env.REACT_APP_PUBLIC_KEY || "YOUR_PUBLIC_KEY"
             )
             .then((response) => {
                 console.log("Email sent successfully:", response.status, response.text);
