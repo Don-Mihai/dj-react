@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { artistsData } from '../../utils';
 import './ArtistSlide.scss';
 import pickRandomArtists from './utils';
+import { useNavigate } from 'react-router-dom';
 
 const randomArtists = pickRandomArtists(artistsData, 3); // делаем подборку из 3 случайных артистов
 
 const ArtistSlide = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
 
   const handleNext = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % randomArtists.length); // % - вычисление остатка делает слайдер бесконечным
@@ -14,6 +16,13 @@ const ArtistSlide = () => {
 
   const handlePrev = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + randomArtists.length) % randomArtists.length);
+  };
+
+  const handleNavArtist = (artistCategory) => {
+    // Передаем данные категории артиста через state в navigate
+    navigate('/artists', {
+      state: { selectedCategory: artistCategory }, // Передаем данные категории артиста
+    });
   };
 
   // таймер для слайдов
@@ -26,7 +35,10 @@ const ArtistSlide = () => {
       <section className="carousel">
         <div className="carousel__inner">
           {randomArtists.map((artist, index) => (
-            <div key={index} className={`dj ${index === activeIndex ? 'active' : ''}`}>
+            <div
+              key={index}
+              className={`dj ${index === activeIndex ? 'active' : ''}`}
+              onClick={index === activeIndex ? () => handleNavArtist(artist.category) : null}>
               <div className="dj__wrap">
                 <img src={artist.image} alt="Slide" className="dj__image" />
                 <div className="figure dj__figure"></div>
@@ -40,8 +52,8 @@ const ArtistSlide = () => {
                 <p className="dj__text" id="text">
                   {artist.fullDescription}
                 </p>
-              </div>
             </div>
+          </div>
           ))}
         </div>
         <div className="arrow left-arrow" onClick={handlePrev}>
