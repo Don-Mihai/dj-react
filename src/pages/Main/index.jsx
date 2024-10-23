@@ -8,7 +8,7 @@ import single1 from "../../assets/singles/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg";
 import single2 from "../../assets/singles/xu-haiwei-iE7AmEF-9wk-unsplash.jpg";
 import single3 from "../../assets/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash.jpg";
 import fanbaseImg2 from "../../assets/djvibe-studiox-BcPOnSqC4Cw-unsplash.jpg";
-import ArtistSlide from "./ArtistSlide";
+import ArtistSlide from "./ArtistSlide/ArtistSlide";
 import ServicesSection from "./ServicesSection";
 
 const Main = () => {

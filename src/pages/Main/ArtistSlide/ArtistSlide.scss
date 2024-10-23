@@ -1,4 +1,4 @@
-@import '../../styles/index.scss';
+@import '../../../styles/index.scss';
 
 .carousel {
   position: relative;
@@ -22,9 +22,12 @@
       @include horizontal-align;
       align-items: center;
       gap: 100px;
+      z-index: 0;
 
       &.active {
         opacity: 1;
+        z-index: 1; // Приподнимаем активный слайд
+        cursor: pointer;
       }
 
       &__wrap {
@@ -69,6 +72,7 @@
     padding: 10px;
     user-select: none;
     color: #151515;
+    z-index: 1;
   }
 
   .left-arrow {
