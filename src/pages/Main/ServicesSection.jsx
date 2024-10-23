@@ -79,6 +79,22 @@ const ServicesSection = () => {
           </button>
         </div>
 
+        <div className="vert-line"></div>
+
+        <div className="tickets__item">
+          <h3 className="tickets__subtitle">Вечеринка</h3>
+          <span className="tickets__price">60</span>
+          <div className="tickets__text-cont">
+            <span className="tickets__text">1 Event</span>
+            <span className="tickets__text">Basic Access</span>
+            <span className="tickets__text">Club Events Only</span>
+            <span className="tickets__text">Free Snacks</span>
+          </div>
+          <button className="button button-secondary" onClick={onOpenModal}>
+            Заказать
+          </button>
+        </div>
+
         <OrderModal open={openModal} onClose={closeModal} />
       </div>
     </section>

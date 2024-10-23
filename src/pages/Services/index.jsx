@@ -138,6 +138,24 @@ const Services = () => {
           </button>
         </div>
 
+        <div className="service-item">
+          <h2 className="service-title">Вечеринка</h2>
+          <span className="service-price">60</span>
+          <p className="service-description">
+            Устройте вечеринку по высшему разряду. А мы сделаем этот вечер незабываемым
+            и полным впечатлений!
+          </p>
+          <ul className="service-benefits">
+            <li>Уникальный формат мероприятия</li>
+            <li>Топовые артисты и ведущие</li>
+            <li>Профессиональная аппаратура</li>
+            <li>Большой опыт организаторов</li>
+          </ul>
+          <button className="button button-secondary order-button" onClick={onOpenModal}>
+            Заказать
+          </button>
+        </div>
+
         <OrderModal open={openModal} onClose={closeModal} />
 
         <section className="testimonials">

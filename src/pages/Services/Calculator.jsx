@@ -85,6 +85,7 @@ const Calculator = () => {
                         <option value="corporate">Корпоратив</option>
                         <option value="birthday">День рождения</option>
                         <option value="jubilee">Юбилей</option>
+                        <option value="party">Вечеринка</option>
                     </select>
                 </div>
 
