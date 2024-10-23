@@ -9,6 +9,7 @@ import single2 from "../../assets/singles/xu-haiwei-iE7AmEF-9wk-unsplash.jpg";
 import single3 from "../../assets/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash.jpg";
 import fanbaseImg2 from "../../assets/djvibe-studiox-BcPOnSqC4Cw-unsplash.jpg";
 import ArtistSlide from "./ArtistSlide/ArtistSlide";
+import ServicesSection from "./ServicesSection";
 
 const Main = () => {
   return (
@@ -155,65 +156,8 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section className="tickets container">
-        <h2 className="title tickets__title">Услуги</h2>
-        <div className="tickets__wrap">
-          <div className="tickets__item">
-            <h3 className="tickets__subtitle">Свадьба</h3>
-            <span className="tickets__price">50</span>
-            <div className="tickets__text-cont">
-              <span className="tickets__text">1 Event</span>
-              <span className="tickets__text">Basic Access</span>
-              <span className="tickets__text">Club Events Only</span>
-              <span className="tickets__text">Free Snacks</span>
-            </div>
 
-            <button className="button button-secondary">buy now</button>
-          </div>
-          <div className="vert-line"></div>
-
-          <div className="tickets__item">
-            <h3 className="tickets__subtitle">Корпоратив</h3>
-            <span className="tickets__price">90</span>
-            <div className="tickets__text-cont">
-              <span className="tickets__text">1 Event</span>
-              <span className="tickets__text">Basic Access</span>
-              <span className="tickets__text">Club Events Only</span>
-              <span className="tickets__text">Free Snacks</span>
-            </div>
-
-            <button className="button">buy now</button>
-          </div>
-
-          <div className="vert-line"></div>
-
-          <div className="tickets__item">
-            <h3 className="tickets__subtitle">День рождения</h3>
-            <span className="tickets__price">50</span>
-            <div className="tickets__text-cont">
-              <span className="tickets__text">1 Event</span>
-              <span className="tickets__text">Basic Access</span>
-              <span className="tickets__text">Club Events Only</span>
-              <span className="tickets__text">Free Snacks</span>
-            </div>
-            <button className="button button-secondary">buy now</button>
-          </div>
-
-          <div className="vert-line"></div>
-
-          <div className="tickets__item">
-            <h3 className="tickets__subtitle">Юбилей</h3>
-            <span className="tickets__price">80</span>
-            <div className="tickets__text-cont">
-              <span className="tickets__text">1 Event</span>
-              <span className="tickets__text">Basic Access</span>
-              <span className="tickets__text">Club Events Only</span>
-              <span className="tickets__text">Free Snacks</span>
-            </div>
-            <button className="button button-secondary">buy now</button>
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
 
       <section className="subscribe">
         <div className="container subscribe__container">
