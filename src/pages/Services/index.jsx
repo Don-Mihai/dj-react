@@ -5,6 +5,14 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { serviceData } from "../../utils";
 import ServiceItem from "./ServiceItem";
+import Banner from "./Banner";
+
+const services = [
+  { ru: 'Диджеи', en: 'dj' },
+  { ru: 'МС', en: 'mc' },
+  { ru: 'Артисты', en: 'artist' },
+  { ru: 'Фото/Видео', en: 'Proto/Video' },
+];
 
 const Services = () => {
   const location = useLocation();
@@ -31,38 +39,9 @@ const Services = () => {
         <h1 className="title services-page__title">Наши Услуги</h1>
 
         <div className="service-banners">
-          <div className="banner">
-            <img
-              src="https://via.placeholder.com/300x200?text=Диджеи"
-              alt="Диджеи"
-              className="banner-image"
-            />
-            <div className="banner-text">Диджеи</div>
-          </div>
-          <div className="banner">
-            <img
-              src="https://via.placeholder.com/300x200?text=МС"
-              alt="МС"
-              className="banner-image"
-            />
-            <div className="banner-text">МС</div>
-          </div>
-          <div className="banner">
-            <img
-              src="https://via.placeholder.com/300x200?text=Артисты"
-              alt="Артисты"
-              className="banner-image"
-            />
-            <div className="banner-text">Артисты</div>
-          </div>
-          <div className="banner">
-            <img
-              src="https://via.placeholder.com/300x200?text=Фото%2FВидео"
-              alt="Фото/Видео"
-              className="banner-image"
-            />
-            <div className="banner-text">Фото/Видео</div>
-          </div>
+          {services.map((service, i) => (
+            <Banner key={i} text={service.ru} category={service.en} />
+          ))}
         </div>
 
         {serviceData.map((service) => (
@@ -76,15 +55,13 @@ const Services = () => {
           <div className="testimonials__wrap">
             <blockquote className="testimonial">
               <p>
-                "Спасибо за организацию нашей свадьбы! Всё прошло просто
-                замечательно, гости были в восторге!"
+                "Спасибо за организацию нашей свадьбы! Всё прошло просто замечательно, гости были в
+                восторге!"
               </p>
               <cite>- Иван и Мария</cite>
             </blockquote>
             <blockquote className="testimonial">
-              <p>
-                "Корпоратив был на высшем уровне. Все сотрудники были довольны!"
-              </p>
+              <p>"Корпоратив был на высшем уровне. Все сотрудники были довольны!"</p>
               <cite>- ООО "ПримерКомпания"</cite>
             </blockquote>
           </div>
@@ -95,8 +72,8 @@ const Services = () => {
 
       <section className="events-link">
         <Link to="/portfolio" className="events-link__content">
-        Наши мероприятия
-        <span className="arrow">→</span>
+          Наши мероприятия
+          <span className="arrow">→</span>
         </Link>
       </section>
     </>
