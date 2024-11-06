@@ -5,7 +5,7 @@ import SendForm from "../../components/SendForm";
 
 const Calculator = () => {
     const location = useLocation();
-    const selectedPerson = location.state?.selectedArtist; // Получаем выбранного человека (артиста, диджея, ведущего)
+    const selectedPerson = location.state?.selectedArtist; // Получаем выбранного человека (артиста, диджея, ведущего) при клике на него на странице диджеев
 
     // Состояния для цен
     const [serviceType, setServiceType] = useState("wedding");
@@ -16,17 +16,32 @@ const Calculator = () => {
     const [hostPrice, setHostPrice] = useState(
         artistsData.find((artist) => artist.category === "mc")?.price || 7000,
     );
-    const [artistPrice, setArtistPrice] = useState(artistsData[0]?.price || 8000);
+    const [artistPrice, setArtistPrice] = useState(
+      artistsData.find((artist) => artist.category === "artist")?.price || 8000,
+    );
+
+    const [selectedDj, setSelectedDj] = useState(
+      artistsData.find((artist) => artist.category === "dj") || null,
+    );
+    const [selectedHost, setSelectedHost] = useState(
+      artistsData.find((artist) => artist.category === "mc") || null,
+    );
+    const [selectedArtist, setSelectedArtist] = useState(
+      artistsData.find((artist) => artist.category === "artist") || null,
+    );
 
     // Эффект для установки выбранного человека
     useEffect(() => {
         if (selectedPerson) {
             if (selectedPerson.category === "dj") {
                 setDjPrice(selectedPerson.price);
+                setSelectedDj(selectedPerson);
             } else if (selectedPerson.category === "mc") {
                 setHostPrice(selectedPerson.price);
+                setSelectedHost(selectedPerson);
             } else if (selectedPerson.category === "artist") {
                 setArtistPrice(selectedPerson.price);
+                setSelectedArtist(selectedPerson);
             }
         }
     }, [selectedPerson]);
@@ -106,17 +121,29 @@ const Calculator = () => {
                     <select
                         id="dj"
                         className="form-control"
-                        value={djPrice}
-                        onChange={(e) => setDjPrice(e.target.value)}
-                    >
+                        value={selectedDj?.id}
+                        onChange={(e) => {
+                            const selectedDj = artistsData.find(
+                              (artist) => artist.id === parseInt(e.target.value),
+                            );
+                            setSelectedDj(selectedDj);
+                            setDjPrice(selectedDj.price);                          
+                    }}>
                         {artistsData
                             .filter((artist) => artist.category === "dj")
                             .map((artist) => (
-                                <option key={artist.id} value={artist.price}>
+                                <option key={artist.id} value={artist.id}>
                                     {artist.name} ({artist.price} ₽)
                                 </option>
                             ))}
                     </select>
+                    {selectedDj && (
+                        <img
+                            className="artist__image"
+                            src={selectedDj.image}
+                            alt={selectedDj.name}
+                        />
+                    )}
                 </div>
 
                 <div className="form-group">
@@ -124,17 +151,29 @@ const Calculator = () => {
                     <select
                         id="host"
                         className="form-control"
-                        value={hostPrice}
-                        onChange={(e) => setHostPrice(e.target.value)}
-                    >
+                        value={selectedHost?.id}
+                        onChange={(e) => {
+                            const selectedHost = artistsData.find(
+                              (artist) => artist.id === parseInt(e.target.value),
+                            );
+                            setSelectedHost(selectedHost);
+                            setHostPrice(selectedHost.price);
+                        }}>
                         {artistsData
                             .filter((artist) => artist.category === "mc")
                             .map((artist) => (
-                                <option key={artist.id} value={artist.price}>
+                                <option key={artist.id} value={artist.id}>
                                     {artist.name} ({artist.price} ₽)
                                 </option>
                             ))}
                     </select>
+                    {selectedHost && (
+                        <img
+                            className="artist__image"
+                            src={selectedHost.image}
+                            alt={selectedHost.name}
+                        />
+                    )}
                 </div>
 
                 <div className="form-group">
@@ -142,17 +181,29 @@ const Calculator = () => {
                     <select
                         id="artist"
                         className="form-control"
-                        value={artistPrice}
-                        onChange={(e) => setArtistPrice(e.target.value)}
-                    >
+                        value={selectedArtist?.id}
+                        onChange={(e) => {
+                            const selectedArtist = artistsData.find(
+                              (artist) => artist.id === parseInt(e.target.value),
+                            );
+                            setSelectedArtist(selectedArtist);
+                            setArtistPrice(selectedArtist.price);
+                        }}>
                         {artistsData
                             .filter((artist) => artist.category === "artist")
                             .map((artist) => (
-                                <option key={artist.id} value={artist.price}>
+                                <option key={artist.id} value={artist.id}>
                                     {artist.name} ({artist.price} ₽)
                                 </option>
                             ))}
                     </select>
+                    {selectedArtist && (
+                    <img
+                        className="artist__image"
+                        src={selectedArtist.image}
+                        alt={selectedArtist.name}
+                    />
+                    )}
                 </div>
 
                 <div className="form-group">
