@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {artistsData} from "../../utils.js";
 import SendForm from "../../components/SendForm";
+import { Avatar } from "@mui/material";
+import stringAvatar from "./utils.js";
 
 const Calculator = () => {
     const location = useLocation();
@@ -134,10 +136,11 @@ const Calculator = () => {
                             ))}
                     </select>
                     {selectedArtists.dj && (
-                        <img
+                        <Avatar
                             className="artist__image"
-                            src={selectedArtists.dj.image}
                             alt={selectedArtists.dj.name}
+                            src={selectedArtists.dj.image}
+                            {...stringAvatar(selectedArtists.dj.name)}
                         />
                     )}
                 </div>
@@ -164,10 +167,11 @@ const Calculator = () => {
                             ))}
                     </select>
                     {selectedArtists.host && (
-                        <img
+                        <Avatar
                             className="artist__image"
                             src={selectedArtists.host.image}
                             alt={selectedArtists.host.name}
+                            {...stringAvatar(selectedArtists.host.name)}
                         />
                     )}
                 </div>
@@ -194,11 +198,12 @@ const Calculator = () => {
                             ))}
                     </select>
                     {selectedArtists.artist && (
-                    <img
-                        className="artist__image"
-                        src={selectedArtists.artist.image}
-                        alt={selectedArtists.artist.name}
-                    />
+                        <Avatar
+                            className="artist__image"
+                            src={selectedArtists.artist.image}
+                            alt={selectedArtists.artist.name}
+                            {...stringAvatar(selectedArtists.artist.name)}
+                        />
                     )}
                 </div>
 
