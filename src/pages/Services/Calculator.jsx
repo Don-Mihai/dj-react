@@ -20,28 +20,24 @@ const Calculator = () => {
       artistsData.find((artist) => artist.category === "artist")?.price || 8000,
     );
 
-    const [selectedDj, setSelectedDj] = useState(
-      artistsData.find((artist) => artist.category === "dj") || null,
-    );
-    const [selectedHost, setSelectedHost] = useState(
-      artistsData.find((artist) => artist.category === "mc") || null,
-    );
-    const [selectedArtist, setSelectedArtist] = useState(
-      artistsData.find((artist) => artist.category === "artist") || null,
-    );
+    const [selectedArtists, setSelectedArtists] = useState({
+      dj: artistsData.find((artist) => artist.category === 'dj') || null,
+      host: artistsData.find((artist) => artist.category === 'mc') || null,
+      artist: artistsData.find((artist) => artist.category === 'artist') || null,
+    });
 
     // Эффект для установки выбранного человека
     useEffect(() => {
         if (selectedPerson) {
             if (selectedPerson.category === "dj") {
                 setDjPrice(selectedPerson.price);
-                setSelectedDj(selectedPerson);
+                setSelectedArtists({ ...selectedArtists, dj: selectedPerson });
             } else if (selectedPerson.category === "mc") {
                 setHostPrice(selectedPerson.price);
-                setSelectedHost(selectedPerson);
+                setSelectedArtists({ ...selectedArtists, host: selectedPerson });
             } else if (selectedPerson.category === "artist") {
                 setArtistPrice(selectedPerson.price);
-                setSelectedArtist(selectedPerson);
+                setSelectedArtists({ ...selectedArtists, artist: selectedPerson });
             }
         }
     }, [selectedPerson]);
@@ -121,13 +117,13 @@ const Calculator = () => {
                     <select
                         id="dj"
                         className="form-control"
-                        value={selectedDj?.id}
+                        value={selectedArtists.dj?.id}
                         onChange={(e) => {
                             const selectedDj = artistsData.find(
                               (artist) => artist.id === parseInt(e.target.value),
                             );
-                            setSelectedDj(selectedDj);
-                            setDjPrice(selectedDj.price);                          
+                            setSelectedArtists({ ...selectedArtists, dj: selectedDj });
+                            setDjPrice(selectedDj.price);
                     }}>
                         {artistsData
                             .filter((artist) => artist.category === "dj")
@@ -137,11 +133,11 @@ const Calculator = () => {
                                 </option>
                             ))}
                     </select>
-                    {selectedDj && (
+                    {selectedArtists.dj && (
                         <img
                             className="artist__image"
-                            src={selectedDj.image}
-                            alt={selectedDj.name}
+                            src={selectedArtists.dj.image}
+                            alt={selectedArtists.dj.name}
                         />
                     )}
                 </div>
@@ -151,12 +147,12 @@ const Calculator = () => {
                     <select
                         id="host"
                         className="form-control"
-                        value={selectedHost?.id}
+                        value={selectedArtists.host?.id}
                         onChange={(e) => {
                             const selectedHost = artistsData.find(
                               (artist) => artist.id === parseInt(e.target.value),
                             );
-                            setSelectedHost(selectedHost);
+                            setSelectedArtists({ ...selectedArtists, host: selectedHost });
                             setHostPrice(selectedHost.price);
                         }}>
                         {artistsData
@@ -167,11 +163,11 @@ const Calculator = () => {
                                 </option>
                             ))}
                     </select>
-                    {selectedHost && (
+                    {selectedArtists.host && (
                         <img
                             className="artist__image"
-                            src={selectedHost.image}
-                            alt={selectedHost.name}
+                            src={selectedArtists.host.image}
+                            alt={selectedArtists.host.name}
                         />
                     )}
                 </div>
@@ -181,12 +177,12 @@ const Calculator = () => {
                     <select
                         id="artist"
                         className="form-control"
-                        value={selectedArtist?.id}
+                        value={selectedArtists.artist?.id}
                         onChange={(e) => {
                             const selectedArtist = artistsData.find(
                               (artist) => artist.id === parseInt(e.target.value),
                             );
-                            setSelectedArtist(selectedArtist);
+                            setSelectedArtists({ ...selectedArtists, artist: selectedArtist });
                             setArtistPrice(selectedArtist.price);
                         }}>
                         {artistsData
@@ -197,11 +193,11 @@ const Calculator = () => {
                                 </option>
                             ))}
                     </select>
-                    {selectedArtist && (
+                    {selectedArtists.artist && (
                     <img
                         className="artist__image"
-                        src={selectedArtist.image}
-                        alt={selectedArtist.name}
+                        src={selectedArtists.artist.image}
+                        alt={selectedArtists.artist.name}
                     />
                     )}
                 </div>
