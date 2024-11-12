@@ -6,8 +6,16 @@ const Banner = ({ text, category }) => {
   const [active, setActive] = useState(false);
   const filteredArtists = artistsData.filter((artist) => artist.category === category);
 
+  const handleServiceClick = (category) => {
+    if (artistsData.some((artist) => artist.category === category)) {
+      setActive(category === active ? false : category);
+    }
+  };
+
   return (
-    <div className={`banner ${active ? 'active' : ''}`} onClick={() => setActive(!active)}>
+    <div
+      className={`banner ${active ? 'active' : ''}`}
+      onClick={() => handleServiceClick(category)}>
       <img
         src={`https://via.placeholder.com/300x200?text=${text}`}
         alt={`${text}`}
