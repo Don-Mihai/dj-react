@@ -2,16 +2,20 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import img1 from "../../assets/logo.png";
 import { useEffect, useState } from "react";
+import styleVariables from '../../styles/variables.scss';
 
 const Header = () => {
-const [headerHeight, setHeaderHeight] = useState('110px');
+  const HEADER_HEIGHT = styleVariables['$header-height'];
+  const SHRINK_HEADER_HEIGHT = '50px';
+  const SCROLL_HEIGHT = 60;
+  const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT);
 
 useEffect(() => {
   const handleScroll = () => { // уменьшение высоты хедера при скролле
-    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-      setHeaderHeight('50px');
+    if (document.body.scrollTop > SCROLL_HEIGHT || document.documentElement.scrollTop > SCROLL_HEIGHT) {
+      setHeaderHeight(SHRINK_HEADER_HEIGHT);
     } else {
-      setHeaderHeight('110px');
+      setHeaderHeight(HEADER_HEIGHT);
     }
   };
 
