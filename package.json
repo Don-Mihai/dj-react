@@ -21,9 +21,14 @@
     "prepare": "husky",
     "format": "prettier --write ."
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "**/*": [
-      "prettier --write"
+      "prettier --write --ignore-unknown"
     ]
   },
   "eslintConfig": {
