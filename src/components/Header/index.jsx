@@ -1,11 +1,34 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import img1 from "../../assets/logo.png";
+import { useEffect, useState } from "react";
+import styleVariables from '../../styles/variables.scss';
 
 const Header = () => {
+  const HEADER_HEIGHT = styleVariables['$header-height'];
+  const SHRINK_HEADER_HEIGHT = '50px';
+  const SCROLL_HEIGHT = 60;
+  const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT);
+
+useEffect(() => {
+  const handleScroll = () => { // уменьшение высоты хедера при скролле
+    if (document.body.scrollTop > SCROLL_HEIGHT || document.documentElement.scrollTop > SCROLL_HEIGHT) {
+      setHeaderHeight(SHRINK_HEADER_HEIGHT);
+    } else {
+      setHeaderHeight(HEADER_HEIGHT);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+
   return (
-    <header className="header">
-      <div className="container header__container">
+    <header className="header" style={{ height: headerHeight }}>
+      <div className="container header__container" style={{ height: headerHeight }}>
         <img src={img1} alt="" className="logo" />
 
         <nav className="nav">

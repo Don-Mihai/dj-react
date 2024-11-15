@@ -7,13 +7,15 @@
   background-color: #212121;
   box-shadow: 0 0 5px #000000a3;
   z-index: 100;
+  transition: 0.2s;
 }
 
 .header__container {
   display: flex;
   align-items: center;
-  height: $header-hight;
+  height: $header-height;
   justify-content: space-between;
+  transition: 0.2s;
 }
 
 .logo {
