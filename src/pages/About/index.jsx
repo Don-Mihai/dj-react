@@ -5,16 +5,12 @@ const About = () => {
     <>
       <section className="company">
         <div className="company__content">
-          <h2 className="company__title">
-            Elevate Your Events with Premier DJ Services
-          </h2>
+          <h2 className="company__title">Elevate Your Events with Premier DJ Services</h2>
           <p className="company__description">
-            At SoundWave Entertainment, we specialize in transforming your
-            celebrations into truly memorable experiences. With a handpicked
-            roster of top-tier DJs, we cater to a wide range of events including
-            weddings, anniversaries, birthdays, and corporate gatherings. Each
-            event is a unique symphony, and our DJs are the maestros who bring
-            it to life.
+            At SoundWave Entertainment, we specialize in transforming your celebrations into truly
+            memorable experiences. With a handpicked roster of top-tier DJs, we cater to a wide
+            range of events including weddings, anniversaries, birthdays, and corporate gatherings.
+            Each event is a unique symphony, and our DJs are the maestros who bring it to life.
           </p>
           <div className="company__contacts">
             <h3 className="contacts__title">Contact Us</h3>

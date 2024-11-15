@@ -17,16 +17,14 @@ const Artists = () => {
   };
 
   // Фильтруем артистов по выбранной категории
-  const filteredArtists = artistsData.filter(
-    (artist) => artist.category === category,
-  );
+  const filteredArtists = artistsData.filter((artist) => artist.category === category);
 
   // Для выбора нужной категории при переходе со слайдера на главной
   useEffect(() => {
     if (selectedCategory) {
       setCategory(selectedCategory);
     }
-  }, [selectedCategory])
+  }, [selectedCategory]);
 
   return (
     <>
@@ -45,25 +43,19 @@ const Artists = () => {
             <div className="search__filter">
               <ul className="search__filter-list">
                 <button
-                  className={`search__filter-button ${
-                    category === "dj" ? "active" : ""
-                  }`}
+                  className={`search__filter-button ${category === "dj" ? "active" : ""}`}
                   onClick={() => handleCategoryChange("dj")}
                 >
                   Диджеи
                 </button>
                 <button
-                  className={`search__filter-button ${
-                    category === "mc" ? "active" : ""
-                  }`}
+                  className={`search__filter-button ${category === "mc" ? "active" : ""}`}
                   onClick={() => handleCategoryChange("mc")}
                 >
                   МС
                 </button>
                 <button
-                  className={`search__filter-button ${
-                    category === "artist" ? "active" : ""
-                  }`}
+                  className={`search__filter-button ${category === "artist" ? "active" : ""}`}
                   onClick={() => handleCategoryChange("artist")}
                 >
                   Артисты

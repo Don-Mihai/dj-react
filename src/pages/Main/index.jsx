@@ -57,45 +57,26 @@ const Main = () => {
         <div className="container release__container">
           <h3 className="title release__title">Latest Releases</h3>
           <span className="release__text">
-            Here are the most recent singles, EPs, and other releases that DJ
-            Angerone has worked on. You can stream and buy them on our website
-            and a variety of digital stores.
+            Here are the most recent singles, EPs, and other releases that DJ Angerone has worked
+            on. You can stream and buy them on our website and a variety of digital stores.
           </span>
           <div className="release__singles">
             <div className="release__card">
-              <img
-                className="release__rect"
-                src={single1}
-                width="318"
-                height="335"
-                alt=""
-              />
+              <img className="release__rect" src={single1} width="318" height="335" alt="" />
               <h4 className="release__card_title">Intense</h4>
               <span className="release__description">Intense</span>
               <span className="release__date">2017</span>
             </div>
 
             <div className="release__card">
-              <img
-                className="release__rect"
-                src={single2}
-                width="318"
-                height="335"
-                alt=""
-              />
+              <img className="release__rect" src={single2} width="318" height="335" alt="" />
               <h4 className="release__card_title">2018</h4>
               <span className="release__description">Trance Year Mix</span>
               <span className="release__date">2019</span>
             </div>
 
             <div className="release__card">
-              <img
-                className="release__rect"
-                src={single3}
-                width="318"
-                height="335"
-                alt=""
-              />
+              <img className="release__rect" src={single3} width="318" height="335" alt="" />
               <h4 className="release__card_title">MY SPACE</h4>
               <span className="release__description">My space</span>
               <span className="release__date">2020</span>
@@ -115,8 +96,8 @@ const Main = () => {
           <div className="fanbase__content">
             <h3 className="title">Join the Fanbase</h3>
             <span className="fanbase__text">
-              Take your chance to join DJ Angerone’s fan club to receive
-              exclusive tracks, free downloads, and other great offers.
+              Take your chance to join DJ Angerone’s fan club to receive exclusive tracks, free
+              downloads, and other great offers.
             </span>
             <div className="fanbase__list-item">
               <div className="fanbase__deco"></div>
@@ -124,8 +105,7 @@ const Main = () => {
                 <h4 className="fanbase__subtitle">Exclusive Releases</h4>
 
                 <span className="fanbase__text">
-                  Get access to unreleased albums and EPs before they are
-                  published.
+                  Get access to unreleased albums and EPs before they are published.
                 </span>
               </div>
             </div>
@@ -136,8 +116,7 @@ const Main = () => {
                 <h4 className="fanbase__subtitle">Full DJ Sets & Podcasts</h4>
 
                 <span className="fanbase__text">
-                  Listen and download full sets and podcasts with tracklists by
-                  DJ Angerone.
+                  Listen and download full sets and podcasts with tracklists by DJ Angerone.
                 </span>
               </div>
             </div>
@@ -148,8 +127,7 @@ const Main = () => {
                 <h4 className="fanbase__subtitle">Шоу диджеев</h4>
 
                 <span className="fanbase__text">
-                  Free tracks and remixes are regularly published for DJ
-                  Angerone’s fan club.
+                  Free tracks and remixes are regularly published for DJ Angerone’s fan club.
                 </span>
               </div>
             </div>

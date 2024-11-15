@@ -2,29 +2,33 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import img1 from "../../assets/logo.png";
 import { useEffect, useState } from "react";
-import styleVariables from '../../styles/variables.scss';
+import styleVariables from "../../styles/variables.scss";
 
 const Header = () => {
-  const HEADER_HEIGHT = styleVariables['$header-height'];
-  const SHRINK_HEADER_HEIGHT = '50px';
+  const HEADER_HEIGHT = styleVariables["$header-height"];
+  const SHRINK_HEADER_HEIGHT = "50px";
   const SCROLL_HEIGHT = 60;
   const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT);
 
-useEffect(() => {
-  const handleScroll = () => { // уменьшение высоты хедера при скролле
-    if (document.body.scrollTop > SCROLL_HEIGHT || document.documentElement.scrollTop > SCROLL_HEIGHT) {
-      setHeaderHeight(SHRINK_HEADER_HEIGHT);
-    } else {
-      setHeaderHeight(HEADER_HEIGHT);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      // уменьшение высоты хедера при скролле
+      if (
+        document.body.scrollTop > SCROLL_HEIGHT ||
+        document.documentElement.scrollTop > SCROLL_HEIGHT
+      ) {
+        setHeaderHeight(SHRINK_HEADER_HEIGHT);
+      } else {
+        setHeaderHeight(HEADER_HEIGHT);
+      }
+    };
 
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header" style={{ height: headerHeight }}>
@@ -59,10 +63,7 @@ useEffect(() => {
               height="24"
             />
           </a>
-          <a
-            href="https://www.instagram.com/your_instagram_username/"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/your_instagram_username/" target="_blank">
             <img
               className="header__img"
               src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg"
@@ -80,10 +81,7 @@ useEffect(() => {
               height="24"
             />
           </a>
-          <a
-            href="https://www.youtube.com/channel/your_youtube_channel_id"
-            target="_blank"
-          >
+          <a href="https://www.youtube.com/channel/your_youtube_channel_id" target="_blank">
             <img
               className="header__img"
               src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/youtube.svg"

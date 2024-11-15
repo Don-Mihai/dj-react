@@ -8,11 +8,11 @@ import ServiceItem from "./ServiceItem";
 import Banner from "./Banner";
 
 const services = [
-  { ru: 'Диджеи', en: 'dj' },
-  { ru: 'МС', en: 'mc' },
-  { ru: 'Артисты', en: 'artist' },
-  { ru: 'Фото/Видео', en: 'Proto/Video' },
-  { ru: 'Прокат оборудования', en: 'equipment' },
+  { ru: "Диджеи", en: "dj" },
+  { ru: "МС", en: "mc" },
+  { ru: "Артисты", en: "artist" },
+  { ru: "Фото/Видео", en: "Proto/Video" },
+  { ru: "Прокат оборудования", en: "equipment" },
 ];
 
 const Services = () => {
@@ -21,10 +21,10 @@ const Services = () => {
 
   const onOpenModal = () => {
     setOpenModal(true);
-  }
+  };
   const closeModal = () => {
     setOpenModal(false);
-  }
+  };
 
   useEffect(() => {
     if (location.hash === "#calculator") {

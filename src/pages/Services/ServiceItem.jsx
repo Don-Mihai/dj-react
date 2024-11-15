@@ -10,8 +10,9 @@ const ServiceItem = ({ service, onOpenModal }) => {
         ))}
       </ul>
       <button
-        className={`button button-${service.id % 2 === 0 ? 'secondary' : 'primary'} order-button`}
-        onClick={onOpenModal}>
+        className={`button button-${service.id % 2 === 0 ? "secondary" : "primary"} order-button`}
+        onClick={onOpenModal}
+      >
         Заказать
       </button>
     </div>

@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { artistsData } from '../../utils';
-import ArtistCard from '../Artists/ArtistCard';
-import classNames from 'classnames';
+import { useState } from "react";
+import { artistsData } from "../../utils";
+import ArtistCard from "../Artists/ArtistCard";
+import classNames from "classnames";
 
 const Banner = ({ text, category }) => {
   const [active, setActive] = useState(false);
@@ -14,7 +14,7 @@ const Banner = ({ text, category }) => {
   };
 
   return (
-    <div className={classNames('banner', { active })} onClick={() => handleServiceClick(category)}>
+    <div className={classNames("banner", { active })} onClick={() => handleServiceClick(category)}>
       <img
         src={`https://via.placeholder.com/300x200?text=${text}`}
         alt={`${text}`}

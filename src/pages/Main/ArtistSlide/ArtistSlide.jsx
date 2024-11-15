@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { artistsData } from '../../../utils';
-import './ArtistSlide.scss';
-import pickRandomArtists from '../utils';
-import { useNavigate } from 'react-router-dom';
-import ArtistComponent from './ArtistComponent';
+import { useEffect, useState } from "react";
+import { artistsData } from "../../../utils";
+import "./ArtistSlide.scss";
+import pickRandomArtists from "../utils";
+import { useNavigate } from "react-router-dom";
+import ArtistComponent from "./ArtistComponent";
 
 const randomArtists = pickRandomArtists(artistsData, 3); // делаем подборку из 3 случайных артистов
 
@@ -21,7 +21,7 @@ const ArtistSlide = () => {
 
   const handleNavArtist = (artistCategory) => {
     // Передаем данные категории артиста через state в navigate
-    navigate('/artists', {
+    navigate("/artists", {
       state: { selectedCategory: artistCategory }, // Передаем данные категории артиста
     });
   };
