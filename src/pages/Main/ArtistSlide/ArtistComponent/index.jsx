@@ -1,8 +1,10 @@
+import classNames from "classnames";
+
 const ArtistComponent = ({ index, artist, activeIndex, handleNavArtist }) => {
   return (
     <div
       key={index}
-      className={`dj ${index === activeIndex ? "active" : ""}`}
+      className={classNames("dj", { active: index === activeIndex })}
       onClick={index === activeIndex ? () => handleNavArtist(artist.category) : null}
     >
       <div className="dj__wrap">

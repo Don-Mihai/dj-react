@@ -1,4 +1,12 @@
+import classNames from "classnames";
+
 const ServiceItem = ({ service, onOpenModal }) => {
+  const buttonClass = classNames(
+    "button",
+    "order-button",
+    `button-${service.id % 2 === 0 ? "secondary" : "primary"}`
+  );
+
   return (
     <div className="service-item">
       <h2 className="service-title">{service.title}</h2>
@@ -9,10 +17,7 @@ const ServiceItem = ({ service, onOpenModal }) => {
           <li key={index}>{benefit}</li>
         ))}
       </ul>
-      <button
-        className={`button button-${service.id % 2 === 0 ? "secondary" : "primary"} order-button`}
-        onClick={onOpenModal}
-      >
+      <button className={buttonClass} onClick={onOpenModal}>
         Заказать
       </button>
     </div>
