@@ -12,6 +12,7 @@ const services = [
   { ru: 'МС', en: 'mc' },
   { ru: 'Артисты', en: 'artist' },
   { ru: 'Фото/Видео', en: 'Proto/Video' },
+  { ru: 'Прокат оборудования', en: 'equipment' },
 ];
 
 const Services = () => {
