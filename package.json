@@ -18,11 +18,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
-    "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format": "prettier --write ."
   },
   "lint-staged": {
-    "*/.{js,jsx,ts,tsx}": [
+    "**/*": [
       "prettier --write"
     ]
   },
