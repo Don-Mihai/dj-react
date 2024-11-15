@@ -11,10 +11,10 @@
 
 /* --------- feel ------------ */
 .feel {
-  margin-top: $header-hight;
+  margin-top: $header-height;
   @include horizontal-align;
   align-items: flex-end;
-  height: calc(100vh - $header-hight);
+  height: calc(100vh - $header-height);
   background: url("../assets/fell.jpg") no-repeat center/cover fixed;
 }
 
@@ -665,7 +665,7 @@
 }
 
 .gallery-home {
-  height: calc(100vh - $header-hight);
+  height: calc(100vh - $header-height);
   overflow: hidden;
 
   &__top {
