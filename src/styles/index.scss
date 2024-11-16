@@ -524,7 +524,8 @@
 /*__________ subscribe start__________*/
 .subscribe {
   padding: $margin-top 0;
-  background: url("../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg") no-repeat center/cover fixed;
+  background: url("../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg") no-repeat center/cover
+    fixed;
 
   &__form {
     padding-top: 60px;
@@ -781,8 +782,8 @@
     &:hover {
       transform: scale(1.05);
     }
-    
-    &.active {      
+
+    &.active {
       overflow: visible;
     }
 

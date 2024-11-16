@@ -6,28 +6,25 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__logo">
         <Link to={"/"}>
-          <img src={img1} alt="" className="logo" />        
+          <img src={img1} alt="" className="logo" />
         </Link>
       </div>
       <nav className="footer__links">
-          <Link to="/services" className="nav__link">
-            Услуги
-          </Link>
-          <Link to="/portfolio" className="nav__link">
-            Портфолио
-          </Link>
-          <Link to="/artists" className="nav__link">
-            Диджеи
-          </Link>
-          <Link to="/about" className="nav__link">
-            О нас
-          </Link>
+        <Link to="/services" className="nav__link">
+          Услуги
+        </Link>
+        <Link to="/portfolio" className="nav__link">
+          Портфолио
+        </Link>
+        <Link to="/artists" className="nav__link">
+          Диджеи
+        </Link>
+        <Link to="/about" className="nav__link">
+          О нас
+        </Link>
       </nav>
       <div className="footer__icons">
-        <a
-          href="https://www.youtube.com/channel/your_youtube_channel_id"
-          target="_blank"
-        >
+        <a href="https://www.youtube.com/channel/your_youtube_channel_id" target="_blank">
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/youtube.svg"
@@ -37,10 +34,7 @@ const Footer = () => {
           />
         </a>
 
-        <a
-          href="https://www.instagram.com/your_instagram_username/"
-          target="_blank"
-        >
+        <a href="https://www.instagram.com/your_instagram_username/" target="_blank">
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg"
@@ -71,9 +65,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        <span className="footer__rights">
-          2024. All the rights ignored. XOXO
-        </span>
+        <span className="footer__rights">2024. All the rights ignored. XOXO</span>
       </div>
       <div className="deco footer__deco"></div>
     </footer>

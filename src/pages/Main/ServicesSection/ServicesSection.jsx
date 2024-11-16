@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import './ServicesSection.scss';
-import OrderModal from '../../Services/OrderModal';
-import { serviceData } from '../../../utils';
-import ServiceItem from './ServiceItem';
+import { useState } from "react";
+import "./ServicesSection.scss";
+import OrderModal from "../../Services/OrderModal";
+import { serviceData } from "../../../utils";
+import ServiceItem from "./ServiceItem";
 
 const ServicesSection = () => {
   const [openModal, setOpenModal] = useState(false);

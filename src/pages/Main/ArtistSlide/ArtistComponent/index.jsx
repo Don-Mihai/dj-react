@@ -1,9 +1,12 @@
+import classNames from "classnames";
+
 const ArtistComponent = ({ index, artist, activeIndex, handleNavArtist }) => {
   return (
     <div
       key={index}
-      className={`dj ${index === activeIndex ? 'active' : ''}`}
-      onClick={index === activeIndex ? () => handleNavArtist(artist.category) : null}>
+      className={classNames("dj", { active: index === activeIndex })}
+      onClick={index === activeIndex ? () => handleNavArtist(artist.category) : null}
+    >
       <div className="dj__wrap">
         <img src={artist.image} alt="Slide" className="dj__image" />
         <div className="figure dj__figure"></div>

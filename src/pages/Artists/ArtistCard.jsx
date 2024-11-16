@@ -39,9 +39,7 @@ const ArtistCard = ({ artist }) => {
       />
       <span className="artist-card__name">{artist.name}</span>
       <span className="artist-card__label">{artist.label}</span>
-      <span className="artist-card__description">
-        {artist.shortDescription}
-      </span>
+      <span className="artist-card__description">{artist.shortDescription}</span>
 
       {/* Модальное окно с полным описанием */}
       <Modal open={open} onClose={handleClose}>
@@ -49,7 +47,7 @@ const ArtistCard = ({ artist }) => {
           <Typography variant="h6">{artist.name}</Typography>
           <Typography variant="body1" sx={{ marginBottom: "10px" }}>
             {artist.fullDescription}
-            </Typography>
+          </Typography>
           <Button onClick={handleOrder} variant="contained" color="primary">
             Заказать
           </Button>

@@ -40,11 +40,7 @@ const OrderModal = ({ open, onClose }) => {
 
         <FormControl fullWidth margin="normal">
           <InputLabel id="dj-label">Выбор Диджея</InputLabel>
-          <Select
-            labelId="dj-label"
-            value={dj}
-            onChange={(e) => setDj(e.target.value)}
-          >
+          <Select labelId="dj-label" value={dj} onChange={(e) => setDj(e.target.value)}>
             <MenuItem value="dj1">Диджей 1 (5000 ₽)</MenuItem>
             <MenuItem value="dj2">Диджей 2 (6000 ₽)</MenuItem>
             <MenuItem value="dj3">Диджей 3 (7000 ₽)</MenuItem>
@@ -53,11 +49,7 @@ const OrderModal = ({ open, onClose }) => {
 
         <FormControl fullWidth margin="normal">
           <InputLabel id="host-label">Выбор Ведущего</InputLabel>
-          <Select
-            labelId="host-label"
-            value={host}
-            onChange={(e) => setHost(e.target.value)}
-          >
+          <Select labelId="host-label" value={host} onChange={(e) => setHost(e.target.value)}>
             <MenuItem value="host1">Ведущий 1 (7000 ₽)</MenuItem>
             <MenuItem value="host2">Ведущий 2 (8000 ₽)</MenuItem>
             <MenuItem value="host3">Ведущий 3 (9000 ₽)</MenuItem>
@@ -66,11 +58,7 @@ const OrderModal = ({ open, onClose }) => {
 
         <FormControl fullWidth margin="normal">
           <InputLabel id="mc-label">Выбор МС</InputLabel>
-          <Select
-            labelId="mc-label"
-            value={mc}
-            onChange={(e) => setMc(e.target.value)}
-          >
+          <Select labelId="mc-label" value={mc} onChange={(e) => setMc(e.target.value)}>
             <MenuItem value="mc1">МС 1 (6000 ₽)</MenuItem>
             <MenuItem value="mc2">МС 2 (7000 ₽)</MenuItem>
             <MenuItem value="mc3">МС 3 (8000 ₽)</MenuItem>
@@ -79,11 +67,7 @@ const OrderModal = ({ open, onClose }) => {
 
         <FormControl fullWidth margin="normal">
           <InputLabel id="artist-label">Выбор Артиста</InputLabel>
-          <Select
-            labelId="artist-label"
-            value={artist}
-            onChange={(e) => setArtist(e.target.value)}
-          >
+          <Select labelId="artist-label" value={artist} onChange={(e) => setArtist(e.target.value)}>
             <MenuItem value="artist1">Артист 1 (8000 ₽)</MenuItem>
             <MenuItem value="artist2">Артист 2 (9000 ₽)</MenuItem>
             <MenuItem value="artist3">Артист 3 (10000 ₽)</MenuItem>
@@ -106,11 +90,7 @@ const OrderModal = ({ open, onClose }) => {
           Подтвердить заказ
         </Button>
         <div className="social-buttons">
-          <a
-            href="https://t.me/your_telegram"
-            target="_blank"
-            className="social-button telegram"
-          >
+          <a href="https://t.me/your_telegram" target="_blank" className="social-button telegram">
             <i className="fab fa-telegram-plane"></i> Заказать через Telegram
           </a>
           <a
