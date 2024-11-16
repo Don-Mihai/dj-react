@@ -17,7 +17,25 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   width: 260px;
+}
+
+.logo__img {
+  margin: 0 16px;
+  height: 48px;
+}
+
+.logo__text {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+
+  & span {
+    white-space: nowrap;
+    font-size: 16px;
+  }
 }
 
 .nav {

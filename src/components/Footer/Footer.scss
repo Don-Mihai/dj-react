@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+@import "../../styles/design-system.scss";
+
+.footer {
+  position: relative;
+  padding: $margin-top 0;
+  background: $darker;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    padding-bottom: 60px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    padding-bottom: 40px;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    padding-bottom: 90px;
+  }
+
+  &__rights {
+    padding-bottom: 40px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__deco {
+    position: absolute;
+    top: -20px;
+    left: 80px;
+  }
+}

@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
 import img1 from "../../assets/logo.png";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__logo">
-        <Link to={"/"}>
-          <img src={img1} alt="" className="logo" />
-        </Link>
-      </div>
+      <Link to={"/"}>
+        <div className="footer__logo">
+          <img src={img1} alt="" className="logo__img" />
+          <p className="logo__text">
+            Sec
+            <span> 2.0</span>
+          </p>
+        </div>
+      </Link>
       <nav className="footer__links">
         <Link to="/services" className="nav__link">
           Услуги
