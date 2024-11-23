@@ -1,0 +1,89 @@
+@import "../../styles/design-system.scss";
+
+.equipment-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 110px;
+  padding: 80px 0;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: $darkest;
+  }
+}
+
+.equipment-card {
+  display: flex;
+  transition: 0.2s;
+  margin-bottom: 60px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 24px;
+  background-color: $lightest;
+  line-height: 1.5;
+
+  &:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  &__image {
+    width: 30%;
+  }
+
+  &__info {
+    width: 50%;
+    margin: 0 28px;
+  }
+
+  &__title {
+    margin: 12px 0 20px;
+  }
+
+  &__order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px 0;
+    border: 1px solid $lighter;
+    border-radius: 5px;
+  }
+
+  &__count {
+    transition: 0.1s;
+    width: 30%;
+    height: 100%;
+    padding: 5px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+
+    &:hover {
+      background-color: $accent;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    width: 40%;
+    font-size: 24px;
+    text-align: center;
+  }
+}

@@ -10,17 +10,6 @@ import {
   Typography,
 } from "@mui/material";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  boxShadow: 24,
-  p: 4,
-};
-
 const OrderModal = ({ open, onClose }) => {
   const [dj, setDj] = useState("dj1");
   const [host, setHost] = useState("host1");
@@ -35,7 +24,7 @@ const OrderModal = ({ open, onClose }) => {
 
   return (
     <Modal open={open} onClose={onClose}>
-      <Box sx={style}>
+      <Box className="modal">
         <Typography variant="h6">Выберите услуги</Typography>
 
         <FormControl fullWidth margin="normal">
@@ -90,12 +79,18 @@ const OrderModal = ({ open, onClose }) => {
           Подтвердить заказ
         </Button>
         <div className="social-buttons">
-          <a href="https://t.me/your_telegram" target="_blank" className="social-button telegram">
+          <a
+            href="https://t.me/your_telegram"
+            target="_blank"
+            rel="noreferrer"
+            className="social-button telegram"
+          >
             <i className="fab fa-telegram-plane"></i> Заказать через Telegram
           </a>
           <a
             href="https://wa.me/your_whatsapp_number"
             target="_blank"
+            rel="noreferrer"
             className="social-button whatsapp"
           >
             <i className="fab fa-whatsapp"></i> Заказать через WhatsApp
