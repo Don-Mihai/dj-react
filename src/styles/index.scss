@@ -547,47 +547,6 @@
 
 /*__________ subscribe end __________*/
 
-/*__________ footer start__________*/
-.footer {
-  position: relative;
-  padding: $margin-top 0;
-  background: $darker;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__logo {
-    padding-bottom: 60px;
-  }
-
-  &__links {
-    display: flex;
-    align-items: center;
-    gap: 46px;
-    padding-bottom: 40px;
-  }
-
-  &__icons {
-    display: flex;
-    align-items: center;
-    gap: 46px;
-    padding-bottom: 90px;
-  }
-
-  &__rights {
-    padding-bottom: 40px;
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  &__deco {
-    position: absolute;
-    top: -20px;
-    left: 80px;
-  }
-}
-
-/*__________ footer end __________*/
-
 @mixin font-settings($size, $weight: normal, $lh: 1.5) {
   font-size: $size;
   font-weight: $weight;

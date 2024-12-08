@@ -33,7 +33,13 @@ const Header = () => {
   return (
     <header className="header" style={{ height: headerHeight }}>
       <div className="container header__container" style={{ height: headerHeight }}>
-        <img src={img1} alt="" className="logo" />
+        <div className="logo">
+          <img src={img1} alt="" className="logo__img" />
+          <p className="logo__text">
+            Sec
+            <span> 2.0</span>
+          </p>
+        </div>
 
         <nav className="nav">
           <Link to="/" className="nav__link">
