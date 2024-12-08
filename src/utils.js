@@ -7,6 +7,11 @@ import image7 from "./assets/artists/Image-3.png";
 import image8 from "./assets/artists/Image-3.png";
 import image4 from "./assets/artists/Image-4.png";
 
+import equipment1 from "./assets/equipment/equipment-01.jpg";
+import equipment2 from "./assets/equipment/equipment-02.jpg";
+import equipment3 from "./assets/equipment/equipment-03.jpg";
+import equipment4 from "./assets/equipment/equipment-04.jpg";
+
 export const artistsData = [
   {
     id: 1,
@@ -156,5 +161,46 @@ export const serviceData = [
       "Профессиональная аппаратура",
       "Большой опыт организаторов",
     ],
+  },
+];
+
+export const equipmentData = [
+  {
+    id: 1,
+    title: "Аренда контроллера Pioneer XDJ-RX3",
+    price: 6000,
+    description:
+      "2-канальная DJ-станция серии XDJ-RX3, обеспечивающая широкий спектр музыкальных эффектов и инструментов.",
+    image: equipment1,
+  },
+  {
+    id: 2,
+    title: "Аренда DJ-Комплекта Pioneer Limited Platinum Edition",
+    price: 8000,
+    description:
+      "Платиновые хромированные корпуса и белые светодиодные огни - добавляют больше шика и внимания к диджею стоящиму за пультом. Идеально подходят для корпоративных мероприятий, презентаций или фото и видео съемок. В комплект входят: - две дэки Pioneer CDJ-2000 NXS-M - микшерный пульт Pioneer DJM-900 NEXUS - необходимая коммутация",
+    image: equipment2,
+  },
+  {
+    id: 3,
+    title: "Аренда мобильного DJ-комплекта на акумуляторах",
+    price: 9500,
+    description:
+      "Мы предлагаем для аренды уникальный DJ-комплект, который позволит отыграть DJ-сэт в любых условиях, любом месте и даже без использования электричества.",
+    image: equipment3,
+  },
+  {
+    id: 4,
+    title: "Аренда наушников для DJ Audio-Technica ATH-M40X",
+    price: 500,
+    description: `
+- Диапазон воспроизводимых частот: 15 – 24 000 Гц
+- Импенданс 35 Ом
+- Чувствительность 98 дБ/мВт
+- Максимальная мощность 1,6 Вт
+- Вес 240 г
+- Диаметр мембраны 40 мм
+- кабель 3м с разъемом minijack 3.5мм c переходником на 6,3 мм`,
+    image: equipment4,
   },
 ];

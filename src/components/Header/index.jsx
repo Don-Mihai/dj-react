@@ -54,6 +54,9 @@ const Header = () => {
           <Link to="/artists" className="nav__link">
             Диджеи
           </Link>
+          <Link to="/equipment" className="nav__link">
+            Оборудование
+          </Link>
           <Link to="/about" className="nav__link">
             О нас
           </Link>
