@@ -27,7 +27,7 @@ const SendForm = ({ open, handleClose, orderDetails }) => {
     emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID || "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        process.env.REACT_APP_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
         emailData,
         process.env.REACT_APP_PUBLIC_KEY || "YOUR_PUBLIC_KEY"
       )
