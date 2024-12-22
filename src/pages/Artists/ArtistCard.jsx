@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { Avatar, Box, Button, Modal, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./ArtistCard.scss";
 
@@ -31,12 +31,13 @@ const ArtistCard = ({ artist }) => {
 
   return (
     <div className="artist-card">
-      <img
-        className="artist-card__image"
+      <Avatar
         src={artist.image}
+        sx={{ width: 150, height: 150 }}
+        className="artist-card__image"
         alt={artist.name}
         onClick={handleOpen}
-      />
+      ></Avatar>
       <span className="artist-card__name">{artist.name}</span>
       <span className="artist-card__label">{artist.label}</span>
       <span className="artist-card__description">{artist.shortDescription}</span>

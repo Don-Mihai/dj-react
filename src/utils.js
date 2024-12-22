@@ -1,11 +1,11 @@
-import image1 from "./assets/artists/Image-1.png";
-import image5 from "./assets/artists/Image-1.png";
+import image1 from "./assets/artists/Image-6.jpg";
 import image2 from "./assets/artists/Image-2.png";
-import image6 from "./assets/artists/Image-2.png";
 import image3 from "./assets/artists/Image-3.png";
+import image4 from "./assets/artists/Image-4.png";
+import image5 from "./assets/artists/Image-1.png";
+import image6 from "./assets/artists/Image-2.png";
 import image7 from "./assets/artists/Image-3.png";
 import image8 from "./assets/artists/Image-3.png";
-import image4 from "./assets/artists/Image-4.png";
 
 import equipment1 from "./assets/equipment/equipment-01.jpg";
 import equipment2 from "./assets/equipment/equipment-02.jpg";
