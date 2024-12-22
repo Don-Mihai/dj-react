@@ -1,13 +1,19 @@
-import audioFile from "../../assets/dj.png";
-import img1 from "../../assets/img.png";
-import img2 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
-import fanbaseImg1 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
-import img3 from "../../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg";
-import fanbaseImg3 from "../../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash.jpg";
-import single1 from "../../assets/singles/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg";
-import single2 from "../../assets/singles/xu-haiwei-iE7AmEF-9wk-unsplash.jpg";
-import single3 from "../../assets/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash.jpg";
-import fanbaseImg2 from "../../assets/djvibe-studiox-BcPOnSqC4Cw-unsplash.jpg";
+import audioFile from "../../assets/dj-large.jpg";
+import img1Large from "../../assets/img-large.jpg";
+import img2Large from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash-large.jpg";
+import fanbaseImg1Large from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash-large.jpg";
+import fanbaseImg1Small from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash-small.jpg";
+import img3Large from "../../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash-large.jpg";
+import fanbaseImg3Large from "../../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash-large.jpg";
+import fanbaseImg3Small from "../../assets/jiroe-matia-rengel-b9kh72kOcdM-unsplash-small.jpg";
+import single1Large from "../../assets/singles/rene-bohmer-YeUVDKZWSZ4-unsplash-large.jpg";
+import single1Small from "../../assets/singles/rene-bohmer-YeUVDKZWSZ4-unsplash-small.jpg";
+import single2Large from "../../assets/singles/xu-haiwei-iE7AmEF-9wk-unsplash-large.jpg";
+import single2Small from "../../assets/singles/xu-haiwei-iE7AmEF-9wk-unsplash-small.jpg";
+import single3Large from "../../assets/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash-large.jpg";
+import single3Small from "../../assets/singles/daniele-levis-pelusi-Vo6A7rwmAJk-unsplash-small.jpg";
+import fanbaseImg2Large from "../../assets/djvibe-studiox-BcPOnSqC4Cw-unsplash-large.jpg";
+import fanbaseImg2Small from "../../assets/djvibe-studiox-BcPOnSqC4Cw-unsplash-small.jpg";
 import ArtistSlide from "./ArtistSlide/ArtistSlide";
 import ServicesSection from "./ServicesSection/ServicesSection";
 
@@ -25,7 +31,7 @@ const Main = () => {
 
           <audio className="audio" controls>
             <source src={audioFile} type="audio/mpeg" />
-            Your browser does not support the audio element.
+              Your browser does not support the audio element.
           </audio>
         </div>
       </section>
@@ -34,35 +40,43 @@ const Main = () => {
       <section className="gallery-home">
         <div className="gallery-home__top">
           <div className="gallery-home__item">
-            <img className="gallery-home__img" src={img1} alt="Image 1" />
+            <img className="gallery-home__img" src={img1Large} alt="Gallery Home Item" />
           </div>
           <div className="gallery-home__item">
-            <img className="gallery-home__img" src={img2} alt="Image 1" />
+            <img className="gallery-home__img" src={img2Large} alt="Gallery Home Item" />
           </div>
           <div className="gallery-home__item">
-            <img className="gallery-home__img" src={img3} alt="Image 1" />
+            <img className="gallery-home__img" src={img3Large} alt="Gallery Home Item" />
           </div>
         </div>
         <div className="gallery-home__bottom">
           <div className="gallery-home__item">
-            <img className="gallery-home__img" src={img1} alt="Image 1" />
+            <img className="gallery-home__img" src={img1Large} alt="Gallery Home Item" />
           </div>
           <div className="gallery-home__item">
-            <img className="gallery-home__img" src={img2} alt="Image 1" />
+            <img className="gallery-home__img" src={img2Large} alt="Gallery Home Item" />
           </div>
         </div>
       </section>
 
       <ServicesSection />
-
+      
       <section className="fanbase">
         <div className="container fanbase__container">
           <div className="fanbase__parallax-pics">
-            <img src={fanbaseImg1} alt="" width="178px" height="126px" />
+            <picture>
+              <source srcSet={fanbaseImg1Small} media="(max-width: 480px)" />
+              <img src={fanbaseImg1Large} alt="Fanbase" width="178px" height="126px" />
+            </picture>
+            <picture>
+              <source srcSet={fanbaseImg2Small} media="(max-width: 480px)" />
+              <img src={fanbaseImg2Large} alt="Fanbase" width="217px" height="152px" />
+            </picture>
 
-            <img src={fanbaseImg2} alt="" width="217px" height="152px" />
-
-            <img src={fanbaseImg3} alt="" width="216px" height="153px" />
+            <picture>
+              <source srcSet={fanbaseImg3Small} media="(max-width: 480px)" />
+              <img src={fanbaseImg3Large} alt="Fanbase" width="216px" height="153px" />
+            </picture>
           </div>
           <div className="fanbase__content">
             <h3 className="title">Join the Fanbase</h3>
@@ -115,21 +129,30 @@ const Main = () => {
           </span>
           <div className="release__singles">
             <div className="release__card">
-              <img className="release__rect" src={single1} width="318" height="335" alt="" />
+              <picture className="release__rect">
+                <source srcSet={single1Small} media="(max-width: 480px)" />
+                <img src={single1Large} width="318" height="335" alt="" />
+              </picture>
               <h4 className="release__card_title">Intense</h4>
               <span className="release__description">Intense</span>
               <span className="release__date">2017</span>
             </div>
 
             <div className="release__card">
-              <img className="release__rect" src={single2} width="318" height="335" alt="" />
+              <picture className="release__rect">
+                <source srcSet={single2Small} media="(max-width: 480px)" />
+                <img src={single2Large} width="318" height="335" alt="" />
+              </picture>
               <h4 className="release__card_title">2018</h4>
               <span className="release__description">Trance Year Mix</span>
               <span className="release__date">2019</span>
             </div>
 
             <div className="release__card">
-              <img className="release__rect" src={single3} width="318" height="335" alt="" />
+              <picture className="release__rect">
+                <source srcSet={single3Small} media="(max-width: 480px)" />
+                <img src={single3Large} width="318" height="335" alt="" />
+              </picture>
               <h4 className="release__card_title">MY SPACE</h4>
               <span className="release__description">My space</span>
               <span className="release__date">2020</span>
