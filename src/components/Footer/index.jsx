@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
 import img1 from "../../assets/logo.png";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__logo">
-        <Link to={"/"}>
-          <img src={img1} alt="" className="logo" />
-        </Link>
-      </div>
+      <Link to={"/"}>
+        <div className="logo footer__logo">
+          <img src={img1} alt="" className="logo__img" />
+          <p className="logo__text">
+            Sec
+            <span> 2.0</span>
+          </p>
+        </div>
+      </Link>
       <nav className="footer__links">
         <Link to="/services" className="nav__link">
           Услуги
@@ -17,14 +22,21 @@ const Footer = () => {
           Портфолио
         </Link>
         <Link to="/artists" className="nav__link">
-          Диджеи
+          Специалисты
+        </Link>
+        <Link to="/equipment" className="nav__link">
+          Оборудование
         </Link>
         <Link to="/about" className="nav__link">
           О нас
         </Link>
       </nav>
       <div className="footer__icons">
-        <a href="https://www.youtube.com/channel/your_youtube_channel_id" target="_blank">
+        <a
+          href="https://www.youtube.com/channel/your_youtube_channel_id"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/youtube.svg"
@@ -34,7 +46,11 @@ const Footer = () => {
           />
         </a>
 
-        <a href="https://www.instagram.com/your_instagram_username/" target="_blank">
+        <a
+          href="https://www.instagram.com/your_instagram_username/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg"
@@ -44,7 +60,7 @@ const Footer = () => {
           />
         </a>
 
-        <a href="https://vk.com/your_vk_username" target="_blank">
+        <a href="https://vk.com/your_vk_username" target="_blank" rel="noreferrer">
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/vk.svg"
@@ -54,7 +70,7 @@ const Footer = () => {
           />
         </a>
 
-        <a href="https://t.me/your_telegram_username" target="_blank">
+        <a href="https://t.me/your_telegram_username" target="_blank" rel="noreferrer">
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/telegram.svg"
@@ -65,7 +81,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        <span className="footer__rights">2024. All the rights ignored. XOXO</span>
+        <span className="footer__rights">2024</span>
       </div>
       <div className="deco footer__deco"></div>
     </footer>

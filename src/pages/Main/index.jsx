@@ -22,16 +22,16 @@ const Main = () => {
     <>
       <section className="feel">
         <div className="container feel__container">
-          <h2 className="title">New Single</h2>
+          <h2 className="title">Ваше событие - Наш ритм!</h2>
           <svg className="feel__subtitle">
             <text x="0" y="85%">
-              Feel the Rhythm
+              Место, где музыка встречает ваше вдохновение.
             </text>
           </svg>
 
           <audio className="audio" controls>
             <source src={audioFile} type="audio/mpeg" />
-            --{">"} Your browser does not support the audio element.
+              Your browser does not support the audio element.
           </audio>
         </div>
       </section>
@@ -59,46 +59,8 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="release">
-        <div className="container release__container">
-          <h3 className="title release__title">Latest Releases</h3>
-          <span className="release__text">
-            Here are the most recent singles, EPs, and other releases that DJ Angerone has worked
-            on. You can stream and buy them on our website and a variety of digital stores.
-          </span>
-          <div className="release__singles">
-            <div className="release__card">
-              <picture className="release__rect">
-                <source srcSet={single1Small} media="(max-width: 480px)" />
-                <img src={single1Large} width="318" height="335" alt="" />
-              </picture>
-              <h4 className="release__card_title">Intense</h4>
-              <span className="release__description">Intense</span>
-              <span className="release__date">2017</span>
-            </div>
-
-            <div className="release__card">
-              <picture className="release__rect">
-                <source srcSet={single2Small} media="(max-width: 480px)" />
-                <img src={single2Large} width="318" height="335" alt="" />
-              </picture>
-              <h4 className="release__card_title">2018</h4>
-              <span className="release__description">Trance Year Mix</span>
-              <span className="release__date">2019</span>
-            </div>
-
-            <div className="release__card">
-              <picture className="release__rect">
-                <source srcSet={single3Small} media="(max-width: 480px)" />
-                <img src={single3Large} width="318" height="335" alt="" />
-              </picture>
-              <h4 className="release__card_title">MY SPACE</h4>
-              <span className="release__description">My space</span>
-              <span className="release__date">2020</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
+      
       <section className="fanbase">
         <div className="container fanbase__container">
           <div className="fanbase__parallax-pics">
@@ -158,7 +120,46 @@ const Main = () => {
         </div>
       </section>
 
-      <ServicesSection />
+      <section className="release">
+        <div className="container release__container">
+          <h3 className="title release__title">Latest Releases</h3>
+          <span className="release__text">
+            Here are the most recent singles, EPs, and other releases that DJ Angerone has worked
+            on. You can stream and buy them on our website and a variety of digital stores.
+          </span>
+          <div className="release__singles">
+            <div className="release__card">
+              <picture className="release__rect">
+                <source srcSet={single1Small} media="(max-width: 480px)" />
+                <img src={single1Large} width="318" height="335" alt="" />
+              </picture>
+              <h4 className="release__card_title">Intense</h4>
+              <span className="release__description">Intense</span>
+              <span className="release__date">2017</span>
+            </div>
+
+            <div className="release__card">
+              <picture className="release__rect">
+                <source srcSet={single2Small} media="(max-width: 480px)" />
+                <img src={single2Large} width="318" height="335" alt="" />
+              </picture>
+              <h4 className="release__card_title">2018</h4>
+              <span className="release__description">Trance Year Mix</span>
+              <span className="release__date">2019</span>
+            </div>
+
+            <div className="release__card">
+              <picture className="release__rect">
+                <source srcSet={single3Small} media="(max-width: 480px)" />
+                <img src={single3Large} width="318" height="335" alt="" />
+              </picture>
+              <h4 className="release__card_title">MY SPACE</h4>
+              <span className="release__description">My space</span>
+              <span className="release__date">2020</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="subscribe">
         <div className="container subscribe__container">

@@ -30,7 +30,7 @@ const Artists = () => {
     <>
       <div className="artists wrapper">
         <div className="top-artists__wrap">
-          <h2 className="top-artists__title">Топ Диджеи</h2>
+          <h2 className="top-artists__title">Топ Специалисты</h2>
           <div className="artist-cards">
             {topDjs.map((dj) => (
               <ArtistCard key={dj.id} artist={dj} />
