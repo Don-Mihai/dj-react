@@ -22,7 +22,7 @@ const Footer = () => {
           Портфолио
         </Link>
         <Link to="/artists" className="nav__link">
-          Диджеи
+          Специалисты
         </Link>
         <Link to="/equipment" className="nav__link">
           Оборудование
@@ -32,7 +32,11 @@ const Footer = () => {
         </Link>
       </nav>
       <div className="footer__icons">
-        <a href="https://www.youtube.com/channel/your_youtube_channel_id" target="_blank">
+        <a
+          href="https://www.youtube.com/channel/your_youtube_channel_id"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/youtube.svg"
@@ -42,7 +46,11 @@ const Footer = () => {
           />
         </a>
 
-        <a href="https://www.instagram.com/your_instagram_username/" target="_blank">
+        <a
+          href="https://www.instagram.com/your_instagram_username/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg"
@@ -52,7 +60,7 @@ const Footer = () => {
           />
         </a>
 
-        <a href="https://vk.com/your_vk_username" target="_blank">
+        <a href="https://vk.com/your_vk_username" target="_blank" rel="noreferrer">
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/vk.svg"
@@ -62,7 +70,7 @@ const Footer = () => {
           />
         </a>
 
-        <a href="https://t.me/your_telegram_username" target="_blank">
+        <a href="https://t.me/your_telegram_username" target="_blank" rel="noreferrer">
           <img
             className="header__img"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/telegram.svg"
@@ -73,7 +81,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        <span className="footer__rights">2024. All the rights ignored. XOXO</span>
+        <span className="footer__rights">2024</span>
       </div>
       <div className="deco footer__deco"></div>
     </footer>
